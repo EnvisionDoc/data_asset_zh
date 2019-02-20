@@ -21,7 +21,7 @@ EnOS 提供不同数据源的订阅服务供开发者选择，针对不同的数
 
 **SA账号**
 
-每一个订阅Topic都必须关联一个[SA账号](/www)，用以Consumer鉴权及数据鉴权。
+每一个订阅Topic都必须关联一个[SA账号](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。
 
 **订阅客户**
 
