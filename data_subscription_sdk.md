@@ -3,7 +3,7 @@
 
 ## 实时数据订阅
 
-**订阅Client类：EOSClient**
+### 订阅Client类：EOSClient
 
 .. list-table::
    :widths: 20 40 30 10
@@ -25,7 +25,7 @@
      - IDataService实例
 
 
-**实时数据订阅服务类：IDataService**
+### 实时数据订阅服务类：IDataService
 
 .. list-table::
    :widths: 20 40 30 10
@@ -47,7 +47,7 @@
      - null
 
 
-**订阅数据处理类：IDataHandler**
+### 订阅数据处理类：IDataHandler
 
 .. list-table::
    :widths: 20 40 30 10
@@ -61,10 +61,31 @@
      - point：实时订阅数据
      - 无
 
+### 示例
+
+```
+/* service */
+EosClient eosClient = new EosClient("sub-server-host", "sub-server-port", "accessKey", "accessSecret");
+IDataService dataService = eosClient.getDataService();
+
+/* handler */
+IDataHandler dataHandler = new IDataHandler(){
+    @Override
+    public void dataRead(StreamMessage message) {
+        System.out.println(message);
+    }
+};
+
+/* subscribe */
+dataService.subscribe(dataHandler, subId);
+
+/* subscribe with consumer group */
+dataService.subscribe(dataHandler, subId, consumerGroup);
+```
 
 ## 告警数据订阅
 
-**订阅Client类：EOSClient**
+### 订阅Client类：EOSClient
 
 .. list-table::
    :widths: 20 40 30 10
@@ -86,7 +107,7 @@
      - IAlertService实例
 
 
-**告警数据订阅服务类：IAlertService**
+### 告警数据订阅服务类：IAlertService
 
 .. list-table::
    :widths: 20 40 30 10
@@ -108,7 +129,7 @@
      - null
 
 
-**订阅数据处理类：IAlertHandler**
+### 订阅数据处理类：IAlertHandler
 
 .. list-table::
    :widths: 20 40 30 10
@@ -122,4 +143,25 @@
      - alert：告警订阅数据
      - 无
 
+### 示例
+
+```
+/* service */
+EosClient eosClient = new EosClient("sub-server-host", "sub-server-port", "accessKey", "accessSecret");
+IAlertService alertService = eosClient.getAlertService();
+
+/* handler */
+IAlertHandler alertHandler = new IAlertHandler (){
+    @Override
+    public void alertRead(Event alert) {
+        System.out.println(alert);
+    }
+};
+
+/* subscribe */
+alertService.subscribe(alertHandler, subId);
+
+/* subscribe with consumer group */
+alertService.subscribe(alertHandler, subId, consumerGroup);
+```
 <!--end-->
