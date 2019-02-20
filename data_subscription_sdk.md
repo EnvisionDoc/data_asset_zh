@@ -1,5 +1,8 @@
 # 数据订阅SDK参考
+完成数据订阅配置之后，可以使用数据订阅SDK来获取已订阅的数据。数据订阅SDK的参考文档如下：
+
 ## 实时数据订阅
+
 **订阅Client类：EOSClient**
 
 函数|函数说明|参数说明|返回
@@ -20,7 +23,10 @@ subscribe(IDataHandler dataHandler,String subId,String consumerGroup);	 |获取s
 ---|---|---|---
 dataRead(MeasurePoint point) | 读取实时订阅数据函数 |point：实时订阅数据|无
 
+
+
 ## 告警数据订阅
+
 **订阅Client类：EOSClient**
 
 函数|函数说明|参数说明|返回

@@ -6,7 +6,7 @@
    :hidden:
    :caption: 返回
 
-   EnOS™ 智能物联网操作系统 <https://docs.eniot.io/docs/enos/zh_CN/latest/overview/enos_introduction.html>
+   EnOS™ 智能物联网操作系统 <https://www.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
 
 .. toctree::
    :maxdepth: 2
@@ -32,11 +32,11 @@
    :maxdepth: 1
    :caption: 参考信息
 
-   设备接入 <https://docs.eniot.io/docs/device-connection/zh_CN/latest/deviceconnection_overview.html>
+   设备接入 <https://www.envisioniot.com/docs/device-connection/zh_CN/latest/deviceconnection_overview.html>
 
 Downloads
 """"""""
     pdf_ htmlzip_ epub_
-.. _pdf: https://docs.eniot.io/projects/online-data/downloads/pdf/latest/
-.. _htmlzip: https://docs.eniot.io/projects/online-data/downloads/htmlzip/latest/
-.. _epub: https://docs.eniot.io/projects/online-data/downloads/epub/latest/
+.. _pdf: https://www.envisioniot.com/projects/online-data/downloads/pdf/latest/
+.. _htmlzip: https://www.envisioniot.com/projects/online-data/downloads/htmlzip/latest/
+.. _epub: https://www.envisioniot.com/projects/online-data/downloads/epub/latest/

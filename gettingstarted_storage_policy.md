@@ -12,7 +12,7 @@
 本教程要实现的场景是：将原始AI采集点*test_raw*的数据进行分钟级TSDB存储，并通过Open API获取一段时间内*test_raw*点每五分钟的最大值。
 
 **数据准备**
-- 模型配置：配置教程请参考[模型配置](https://docs.eniot.io/docs/device-connection/zh_CN/latest/model/model_overview.html)。
+- 模型配置：配置教程请参考[模型配置](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/model/model_overview.html)。
 
 本教程使用的模型*testModel*的配置如下：
 
@@ -36,4 +36,4 @@ Measure Point	 | test_raw | test_raw|AI |DOUBLE|- -
 内容配置完成后，点击发布按钮即可完成策略配置的保存和发布，系统会根据新的配置对数据进行存储。
 
 ## 第三步：使用Open API获取聚合数据
-使用AI分钟级规整数据对应的Open API *getAssetsAINormalizedData*可获取刚刚存储的测点数据。Open API的使用请参考[调用 EnOS REST API](https://docs.eniot.io/docs/app-development/zh_CN/latest/call_enos_api.html)。
+使用AI分钟级规整数据对应的Open API *getAssetsAINormalizedData*可获取刚刚存储的测点数据。Open API的使用请参考[调用 EnOS REST API](https://www.envisioniot.com/docs/app-development/zh_CN/latest/call_enos_api.html)。

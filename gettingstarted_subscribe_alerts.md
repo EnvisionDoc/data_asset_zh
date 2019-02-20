@@ -23,8 +23,8 @@
 .. note:: - 其中 *test_raw* 为原始采集点，*test_5min* 是原始点要经过流式计算聚合后输出的数据点名。
         - 必须保证需要处理的输入点和输出点的点类型都是AI。
 
-- **数据接入**：*test_raw*为告警数据采集点，请参考[设备连接](https://docs.eniot.io/docs/device-connection/zh_CN/latest/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
-- **告警配置**：请参考[资产告警](https://docs.eniot.io/docs/event-management/zh_CN/latest/alert_overview.html)来完成 *test_raw* 点数据的告警配置。
+- **数据接入**：*test_raw*为告警数据采集点，请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
+- **告警配置**：请参考[资产告警](https://www.envisioniot.com/docs/event-management/zh_CN/latest/alert_overview.html)来完成 *test_raw* 点数据的告警配置。
 
 
 ## 操作步骤
@@ -41,19 +41,19 @@
 
 进入 **EnOS Portal > 控制台 > 数据订阅** 模块，可查看当前组织创建的所有订阅Topic；请参考如下步骤完成告警数据订阅Topic的创建及配置：
 
-1. **创建订阅**：点击添加按钮，可添加订阅Topic，本教程中选择告警数据订阅。
+1. 创建订阅：点击**添加订阅**按钮，可添加订阅Topic，本教程中选择**告警数据订阅**。
 
-2. **选择订阅关联的SA账号**：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考[管理应用](https://docs.eniot.io/docs/app-development/zh_CN/latest/managing_apps.html)。
+2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考[管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)。
 
-3. **选择需要订阅的客户数据**：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
+3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 
-4. **选择模型过滤条件**：本教程中选择 *testModel* 这个模型作为条件，订阅系统则会过滤出符合模型条件的数据。
+4. 选择模型过滤条件：本教程中选择 *testModel* 这个模型作为条件，订阅系统则会过滤出符合模型条件的数据。
 
 
 
 ## 第二步：保存并启动订阅Topic
 
-配置好订阅Topic之后，点击保存，返回至列表页面，开启保存好的订阅Topic，启动数据的生产。
+配置好订阅Topic之后，点击**保存**，返回至列表页面，开启保存好的订阅Topic，启动数据的生产。
 
 
 
