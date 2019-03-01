@@ -30,13 +30,11 @@ EnOS流数据分析具有高可扩展性、高吞吐量、和高容错性等优�
 
 数据订阅支持订阅实时资产数据和资产警报数据。通过数据订阅服务，应用程序不需要反复频繁地调用API来获取资产数据。相反，应用程序只在推送数据时调用API，从而提高API调用效率并降低成本。
 
-<!--
-
 **数据存储策略**
 
-EnOS provides a variety of data storage options for you based on your data storage and reading requirements. Data is stored by categories (data type and storage time), thus reducing data storage costs and enhancing data reading efficiency.
+根据你的数据存储和读取需求，EnOS提供多种数据存储选项。按照不同的数据类型和存储时间分别存储数据，从而降低数据存储成本，提高数据读取效率。
 
--->
+
 
 ## 相关服务
 

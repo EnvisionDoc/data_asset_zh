@@ -13,6 +13,7 @@
 
    data_asset_concepts
    data_subscription_overview
+   storage_policy_overview
 
 .. toctree::
    :maxdepth: 2
@@ -20,12 +21,15 @@
 
    gettingstarted_subscribe_realtime
    gettingstarted_subscribe_alerts
+   gettingstarted_storage_policy
 
 .. toctree::
    :maxdepth: 2
    :caption: 操作
 
    managing_data_subscription
+   configuring_tsdb_storage
+   managing_storage_groups
 
 .. toctree::
    :maxdepth: 1

@@ -58,18 +58,20 @@ Consumer 的一个对象实例，不同的 Consumer 实例可以运行在不同�
 
 消息过滤。订阅者可以根据过滤条件对消息进行过滤，确保订阅者最终只接收被过滤后的数据。消息过滤在 订阅 服务端完成。
 
-<!--
 
-## About Storage Policy
 
-To help you understand data storage policy related concepts and customize data storage policies, definition and description of related terms are as follows.
+## 数据存储策略相关术语
 
-**Storage group**
+数据存储策略相关的专有名词及术语的定义和解释如下，方便你理解相关概念并制定适用的数据存储策略。
 
-A storage group is
+### Storage group
 
-**Storage type**
+存储分组，支持将不同项目或不同领域的存储需求进行不同的配置，比如风领域和光领域的数据存储可以分开配置。
 
-A storage type is
+### Storage type
 
--->
+存储类型，支持将不同类型的数据（AI原始数据，AI分钟级归一化数据，DI数据，通用数据）进行分别存储，并可通过调用不同的API接口查询存储的数据。
+
+### Storage time
+
+数据保留时长，目前支持的存储时长为1个月、3个月、6个月、1年、2年、3年、5年、10年、15年、20年。
