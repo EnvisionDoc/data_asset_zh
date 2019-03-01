@@ -256,7 +256,7 @@ latex_elements = {
             \centerline{\fontsize{16pt}{\baselineskip}\selectfont \textbf{远景智能}}
             \vspace{3mm}
             \renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
-            \centerline{today\\}
+            \centerline{\today\\}
         \end{titlepage}
 
         \clearpage
