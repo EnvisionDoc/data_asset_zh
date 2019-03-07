@@ -21,11 +21,11 @@ EnOS 提供不同数据源的订阅服务供开发者选择，针对不同的数
 
 **SA账号**
 
-每一个订阅Topic都必须关联一个[SA账号](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。
+每一个订阅Topic都必须关联一个[SA账号](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。系统会动态检测SA账号的有效性并及时更新订阅配置。当订阅关联的SA账号被删除，则该订阅失效。
 
 **订阅客户**
 
-根据SA的客户数据权限（应用购买关系），可选择需要订阅的客户数据。
+根据SA的客户数据权限（应用购买关系），可选择需要订阅的客户数据。当客户解除了对SA账号的授权，与此SA相关的订阅会自动解除对该客户数据的订阅。 
 
 **模型条件**
 
@@ -36,7 +36,10 @@ EnOS 提供不同数据源的订阅服务供开发者选择，针对不同的数
    - 模型过滤条件：支持用户设置模型过滤条件
    - 设备标签过滤条件：支持用户根据设备标签过滤数据
 
+注：当订阅配置的模型或测点源数据被删除，订阅配置页面依旧能看到订阅配置信息，但是会提示相关配置项为未知对象。 
+
 ## 启动订阅
+
 配置好订阅Topic后，可点击**启动**按钮对Topic进行数据订阅，开启Topic后，Producer会开始向Topic里面写入数据。
 
 ## 删除订阅
