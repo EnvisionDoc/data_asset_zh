@@ -3,7 +3,7 @@
 
 ## 实时数据订阅
 
-### 订阅Client类：EOSClient
+### 订阅Client类：EosClient
 
 .. list-table::
    :widths: 20 40 30 10
@@ -12,12 +12,12 @@
      - 函数说明
      - 参数说明
      - 返回
-   * - EosClient(String host,int port,String accessKey,String secret)
+   * - EosClient(String host,int port,String accessKey,String accessSecret)
      - 获取构造函数
      - + host: 订阅服务端地址
        + port: 端口
        + accesskey: accessKey
-       + secret: 对应accesskey的secret
+       + accessSecret: 对应accesskey的secret
      - EosClient实例
    * - getDataService()
      - 获取实时数据订阅服务实例
@@ -65,7 +65,7 @@
 
 ```
 /* service */
-EosClient eosClient = new EosClient("sub-server-host", "sub-server-port", "accessKey", "accessSecret");
+EosClient eosClient = new EosClient(host, port, accessKey, accessSecret);
 IDataService dataService = eosClient.getDataService();
 
 /* handler */
@@ -83,9 +83,11 @@ dataService.subscribe(dataHandler, subId);
 dataService.subscribe(dataHandler, subId, consumerGroup);
 ```
 
+.. note:: 在以上示例中， `host` 和 `port` 指订阅服务的地址和端口号。由于不同的云服务和实例的服务地址和端口号不同，请联系远景智能项目经理或技术支持获取对应的服务和端口信息。
+
 ## 告警数据订阅
 
-### 订阅Client类：EOSClient
+### 订阅Client类：EosClient
 
 .. list-table::
    :widths: 20 40 30 10
@@ -94,12 +96,12 @@ dataService.subscribe(dataHandler, subId, consumerGroup);
      - 函数说明
      - 参数说明
      - 返回
-   * - EosClient(String host,int port,String accessKey,String secret)
+   * - EosClient(String host,int port,String accessKey,String accessSecret)
      - 获取构造函数
      - + host: 订阅服务端地址
        + port: 端口
        + accesskey: accessKey
-       + secret: 对应accesskey的secret
+       + accessSecret: 对应accesskey的secret
      - EosClient实例
    * - getAlertService()
      - 获取告警数据订阅服务实例
@@ -147,7 +149,7 @@ dataService.subscribe(dataHandler, subId, consumerGroup);
 
 ```
 /* service */
-EosClient eosClient = new EosClient("sub-server-host", "sub-server-port", "accessKey", "accessSecret");
+EosClient eosClient = new EosClient(host, port, accessKey, accessSecret);
 IAlertService alertService = eosClient.getAlertService();
 
 /* handler */

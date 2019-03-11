@@ -98,6 +98,8 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
   alertService.subscribe(alertHandler, subId, consumerGroup);
   ```
 
+.. note:: 在以上示例中， `sub_server_host` 和 `sub_server_port` 指订阅服务的地址和端口号。由于不同的云服务和实例的服务地址和端口号不同，请联系远景智能项目经理或技术支持获取对应的服务和端口信息。
+
 有关数据订阅SDK的详细信息，请参考[数据订阅SDK参考](data_subscription_sdk)。
 
 ## 第四步：查看数据消费结果
