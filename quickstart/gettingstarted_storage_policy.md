@@ -2,7 +2,6 @@
 该教程能帮助你快速学习如何使用存储策略进行数据存储配置及进行数据读取。
 
 ## 前提条件
-- EnOS平台登录账号
 - 已被授权存储策略模块
 - 已接入设备并且设备已经在发送数据
 
@@ -12,13 +11,13 @@
 本教程要实现的场景是：将原始AI采集点*test_raw*的数据进行分钟级TSDB存储，并通过Open API获取一段时间内*test_raw*点每五分钟的最大值。
 
 **数据准备**
-- 模型配置：配置教程请参考[模型配置](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/model/model_overview.html)。
+- 模型配置：配置教程请参考[创建模型](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/howto/model/creating_model.html)。
 
 本教程使用的模型*testModel*的配置如下：
 
-Feature Type|Name|Identifier|Point Type |Data Type	|Unit
----|---|---|---|---|---
-Measure Point	 | test_raw | test_raw|AI |DOUBLE|- -
+Feature Type|Name|Identifier|Point Type |Data Type	
+---|---|---|---|---
+Measure Point	 | test_raw | test_raw|AI |DOUBLE
 
 ## 操作步骤
 使用存储策略实现本教程场景的操作步骤如下：
@@ -34,7 +33,7 @@ Measure Point	 | test_raw | test_raw|AI |DOUBLE|- -
 - 保留时长：可按需配置数据存储时长，比如1个月；
 - 存储测点选择：选择需要存储的模型测点，本教程选择*testModel*下的*test_raw*这个测点；
 
-内容配置完成后，点击**确认**按钮即可完成存储策略的保存和发布，系统会根据新的配置对数据进行存储。
+内容配置完成后，点击**确认**按钮即可完成存储策略的保存和发布，系统会根据新的配置对数据进行存储。当AI数据进入分钟级归一化数据TSDB时，会自动去除掉数据时间戳的秒级后缀，因此某一分钟只会存储最后一条入库的数据。
 
 ## 第三步：使用Open API获取聚合数据
 

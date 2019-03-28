@@ -3,7 +3,6 @@
 
 ## 前提条件
 
-- EnOS平台登录账号
 - 已被授权数据订阅模块
 - 已接入设备并且设备已经在发送数据
 - 已安装好IDE（IDEA或者Eclipse）的电脑
@@ -26,9 +25,9 @@
 .. note:: - 其中 *test_raw* 为原始采集点，*test_5min* 是原始点要经过流式计算聚合后输出的数据点名。
         - 必须保证需要处理的输入点和输出点的点类型都是AI。
 
-- **数据接入**：请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
+- **数据接入**：请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
 
-- **数据处理**：请参考[AI数据聚合处理](https://www.envisioniot.com/docs/online-data/zh_CN/latest/ai_template_overview.html)来完成 *test_5min* 点数据的计算。
+- **数据处理**：请参考[AI数据聚合处理](https://www.envisioniot.com/docs/data-asset/zh_CN/dev/quickstart/gettingstarted_ai.html)来完成 *test_5min* 点数据的计算。
 
 
 ## 操作步骤
@@ -61,7 +60,8 @@
 
 EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发并消费订阅数据，请参考如下步骤进行线下开发。
 - 在IDE中引用对应的Maven地址，SDK的Maven仓库地址是：https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.0.0
-IDE中Maven引用示例如下：
+
+  IDE中Maven引用示例如下：
 
 ```java
 <dependency>
@@ -98,7 +98,7 @@ dataService.subscribe(dataHandler, subId, consumerGroup);
 
 .. note:: 在以上示例中， `sub_server_host` 和 `sub_server_port` 指订阅服务的地址和端口号。由于不同的云服务和实例的服务地址和端口号不同，请联系远景智能项目经理或技术支持获取对应的服务和端口信息。
 
-有关数据订阅SDK的详细信息，请参考[数据订阅SDK参考](data_subscription_sdk)。
+有关数据订阅SDK的详细信息，请参考[数据订阅SDK参考](../reference/data_subscription_sdk)。
 
 ## 第四步：查看数据消费结果
 
