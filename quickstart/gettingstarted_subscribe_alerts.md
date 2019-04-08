@@ -13,14 +13,12 @@
 实现的场景：对原始AI采集点 *test_raw* 进行告警配置，并订阅其告警数据。
 
 **数据准备**
+
 - **模型配置**：使用的模型（*testModel*）配置如下：
 
 | 功能类型 | 名称     | ID       | 测点类型 | 数据类型 |
 |:---------|:---------|:---------|:---------|:---------|
 | 测点     | test_raw | test_raw | AI       | DOUBLE   |
-
-.. note:: - 其中 *test_raw* 为原始采集点，*test_5min* 是原始点要经过流式计算聚合后输出的数据点名。
-        - 必须保证需要处理的输入点和输出点的点类型都是AI。
 
 - **数据接入**：*test_raw*为告警数据采集点，请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
 - **告警配置**：请参考[资产告警](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/howto/alert/alert_overview.html)来完成 *test_raw* 点数据的告警配置。
@@ -75,13 +73,15 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 
   ```java
   String sub_server_host ="sub_server_host";
-  String sub_server_port ="sub_server_port";
+  int sub_server_port ="sub_server_port";
   String accessKey ="accessKey";
   String accessSecret ="accessSecret";
+  String subId = "subscriptionId";
+  
   /* service */
   EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
   IAlertService alertService = eosClient.getAlertService();
-
+  
   /* handler */
   IAlertHandler alertHandler = new IAlertHandler(){
       @Override
@@ -89,10 +89,10 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
           System.out.println(event);
       }
   };
-
+  
   /* subscribe */
   alertService.subscribe(alertHandler, subId);
-
+  
   /* subscribe with consumer group */
   alertService.subscribe(alertHandler, subId, consumerGroup);
   ```

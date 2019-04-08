@@ -11,7 +11,7 @@
 
 **目标**
 
-实现的场景：将原始AI采集点*test_raw*的数据进行每5分钟取最大值，取值结果输出给新AI点*test_5min*，并同时订阅*test_raw*、*test_5min* 这两个点的数据。
+实现的场景：订阅AI原始数据采集点*test_raw*的数据。
 
 **数据准备**
 
@@ -20,14 +20,9 @@
 | 功能类型  |   名称     |    ID      | 测点类型 |  数据类型 |
 | --------- | --------- | ---------- | -------- | -------- |
 | 测点       | test_raw  | test_raw   |    AI   |  DOUBLE  |
-| 测点       | test_5min | test_5min  |    AI   |  DOUBLE  |
 
-.. note:: - 其中 *test_raw* 为原始采集点，*test_5min* 是原始点要经过流式计算聚合后输出的数据点名。
-        - 必须保证需要处理的输入点和输出点的点类型都是AI。
+- **数据接入**：请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成设备连接，采集 *test_raw* 测点的数据。
 
-- **数据接入**：请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
-
-- **数据处理**：请参考[AI数据聚合处理](https://www.envisioniot.com/docs/data-asset/zh_CN/dev/quickstart/gettingstarted_ai.html)来完成 *test_5min* 点数据的计算。
 
 
 ## 操作步骤
@@ -48,7 +43,7 @@
 
 3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 
-4. 选择模型点过滤条件：本教程中选择 *testModel* 的 *test_raw*、*test_5min* 这两个点，订阅系统则会过滤出符合模型测点条件的数据。
+4. 选择模型点过滤条件：本教程中选择 *testModel* 的 *test_raw*测点，订阅系统则会过滤出符合模型测点条件的数据。
 
 
 ## 第二步：保存并启动订阅Topic
@@ -75,9 +70,11 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 
 ```java
 String sub_server_host ="sub_server_host";
-String sub_server_port ="sub_server_port";
+int sub_server_port ="sub_server_port";
 String accessKey ="accessKey";
 String accessSecret ="accessSecret";
+String subId = "subscriptionId";
+
 /* service */
 EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
 IDataService dataService = eosClient.getDataService();
