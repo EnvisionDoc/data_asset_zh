@@ -1,6 +1,33 @@
 # 数据订阅SDK参考
 完成数据订阅配置之后，可以使用数据订阅SDK来获取已订阅的数据。数据订阅SDK的参考文档如下：
 
+## SDK 依赖
+
+在使用数据订阅SDK之前，需要在Java开发项目文件中添加如下Maven依赖：
+
+```
+// 数据订阅SDK的依赖
+<dependency>
+    <groupId>com.envisioniot</groupId>
+    <artifactId>enos-subscribe</artifactId>
+    <version>2.0.0</version>
+</dependency>
+  
+// 需要额外增加gson和log4j的依赖
+<dependency>
+  <groupId>com.google.code.gson</groupId>
+  <artifactId>gson</artifactId>
+  <version>2.8.0</version>
+</dependency>
+<dependency>
+  <groupId>log4j</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.2.16</version>
+</dependency>
+```
+
+
+
 ## 实时数据订阅
 
 ### 订阅Client类：EosClient
@@ -64,23 +91,48 @@
 ### 示例
 
 ```
-/* service */
-EosClient eosClient = new EosClient(host, port, accessKey, accessSecret);
-IDataService dataService = eosClient.getDataService();
+import com.envisioniot.sub.client.EosClient;
+import com.envisioniot.sub.client.data.IDataHandler;
+import com.envisioniot.sub.client.data.IDataService;
+import com.envisioniot.sub.common.model.dto.StreamMessage;
+ 
+public class DataServiceDemo {
+    public static void main(String[] args) throws Exception {
+        // 订阅服务地址，请根据使用环境填写
+        String subServerHost = "XXX";
+        // 订阅服务端口，请根据使用环境填写
+        int subServerPort = 9001;
+        // 应用身份验证，在应用创建时生成
+        String accessKey = "XXX";
+        // 应用身份验证，在应用创建时生成
+        String accessSecret = "XXX";
 
-/* handler */
-IDataHandler dataHandler = new IDataHandler(){
-    @Override
-    public void dataRead(StreamMessage message) {
-        System.out.println(message);
+        // 订阅ID，创建订阅时生成
+        String subId = "XXX";
+ 
+        // 订阅分组，相关概念见以上接口定义（可选）
+        String consumerGroup = "XXX";
+ 
+        EosClient eosClient = new EosClient(subServerHost, subServerPort, accessKey, accessSecret);
+ 
+        // 根据订阅类型获取相应的service，本示例获取实时数据service
+        IDataService dataService = eosClient.getDataService();
+ 
+        // 在启动订阅之前需要创建订阅数据处理函数
+        IDataHandler dataHandler = new IDataHandler(){
+            public void dataRead(StreamMessage message) {
+                System.out.println(message);
+            }
+        };
+ 
+        // 需要调用subscribe函数创建订阅连接，调用后订阅连接被创建
+        dataService.subscribe(dataHandler, subId);
+ 
+        // 和上面的subscribe任选其一使用来创建连接
+        // 同时指定订阅分组，关于订阅分组的概念在上面的接口定义有说明
+        dataService.subscribe(dataHandler, subId, consumerGroup);
     }
-};
-
-/* subscribe */
-dataService.subscribe(dataHandler, subId);
-
-/* subscribe with consumer group */
-dataService.subscribe(dataHandler, subId, consumerGroup);
+}
 ```
 
 .. note:: 在以上示例中， `host` 和 `port` 指订阅服务的地址和端口号。由于不同的云服务和实例的服务地址和端口号不同，请联系远景智能项目经理或技术支持获取对应的服务和端口信息。
@@ -148,22 +200,48 @@ dataService.subscribe(dataHandler, subId, consumerGroup);
 ### 示例
 
 ```
-/* service */
-EosClient eosClient = new EosClient(host, port, accessKey, accessSecret);
-IAlertService alertService = eosClient.getAlertService();
-
-/* handler */
-IAlertHandler alertHandler = new IAlertHandler (){
-    @Override
-    public void alertRead(Event alert) {
-        System.out.println(alert);
+import com.envisioniot.sub.client.EosClient;
+import com.envisioniot.sub.client.event.IAlertHandler;
+import com.envisioniot.sub.client.event.IAlertService;
+import com.envisioniot.sub.common.model.Alert;
+ 
+public class AlertServiceDemo1 {
+    public static void main(String[] args) throws Exception {
+        // 订阅服务地址，请根据使用环境填写
+        String subServerHost = "XXX";
+        // 订阅服务端口，请根据使用环境填写
+        int subServerPort = 9001;
+        // 应用身份验证，在应用创建时生成
+        String accessKey = "XXX";
+        // 应用身份验证，在应用创建时生成
+        String accessSecret = "XXX";
+ 
+        // 订阅ID，创建订阅时生成
+        String subId = "XXX";
+ 
+        // 订阅分组，相关概念见以上接口定义（可选）
+        String consumerGroup = "XXX";
+ 
+        EosClient eosClient = new EosClient(subServerHost, subServerPort, accessKey, accessSecret);
+ 
+        // 根据订阅类型获取相应的service，本示例获取告警service
+        IAlertService alertService = eosClient.getAlertService();
+ 
+        // 在启动订阅之前需要创建订阅数据处理函数
+        IAlertHandler alertHandler = new IAlertHandler (){
+            @Override
+            public void alertRead(Alert alert) {
+                System.out.println(alert);
+            }
+        };
+ 
+        // 需要调用subscribe函数创建订阅连接，调用后订阅连接被创建
+        alertService.subscribe(alertHandler, subId);
+ 
+        // 和上面的subscribe任选其一使用来创建连接
+        // 同时指定订阅分组，关于订阅分组的概念在上面的接口定义有说明
+        alertService.subscribe(alertHandler, subId, consumerGroup);
     }
-};
-
-/* subscribe */
-alertService.subscribe(alertHandler, subId);
-
-/* subscribe with consumer group */
-alertService.subscribe(alertHandler, subId, consumerGroup);
+}
 ```
 <!--end-->
