@@ -6,14 +6,11 @@
 在使用数据订阅SDK之前，需要在Java开发项目文件中添加如下Maven依赖：
 
 ```
-// 数据订阅SDK的依赖
 <dependency>
-    <groupId>com.envisioniot</groupId>
-    <artifactId>enos-subscribe</artifactId>
-    <version>2.0.0</version>
+  <groupId>com.envisioniot</groupId>
+  <artifactId>enos-subscribe</artifactId>
+  <version>2.0.0</version>
 </dependency>
-  
-// 需要额外增加gson和log4j的依赖
 <dependency>
   <groupId>com.google.code.gson</groupId>
   <artifactId>gson</artifactId>
@@ -99,21 +96,21 @@ import com.envisioniot.sub.common.model.dto.StreamMessage;
 public class DataServiceDemo {
     public static void main(String[] args) throws Exception {
         // 订阅服务地址，请根据使用环境填写
-        String subServerHost = "XXX";
+        String host = "subscription_server";
         // 订阅服务端口，请根据使用环境填写
-        int subServerPort = 9001;
+        int port = 9001;
         // 应用身份验证，在应用创建时生成
-        String accessKey = "XXX";
+        String accessKey = "access_key";
         // 应用身份验证，在应用创建时生成
-        String accessSecret = "XXX";
+        String secretKey = "secret_key";
 
         // 订阅ID，创建订阅时生成
-        String subId = "XXX";
+        String subId = "subscription_id";
  
         // 订阅分组，相关概念见以上接口定义（可选）
-        String consumerGroup = "XXX";
+        String consumerGroup = "consumer_group";
  
-        EosClient eosClient = new EosClient(subServerHost, subServerPort, accessKey, accessSecret);
+        EosClient eosClient = new EosClient(host, port, accessKey, secretKey);
  
         // 根据订阅类型获取相应的service，本示例获取实时数据service
         IDataService dataService = eosClient.getDataService();
@@ -208,21 +205,21 @@ import com.envisioniot.sub.common.model.Alert;
 public class AlertServiceDemo1 {
     public static void main(String[] args) throws Exception {
         // 订阅服务地址，请根据使用环境填写
-        String subServerHost = "XXX";
+        String host = "subscription_server";
         // 订阅服务端口，请根据使用环境填写
-        int subServerPort = 9001;
+        int port = 9001;
         // 应用身份验证，在应用创建时生成
-        String accessKey = "XXX";
+        String accessKey = "access_key";
         // 应用身份验证，在应用创建时生成
-        String accessSecret = "XXX";
- 
+        String secretKey = "secret_key";
+
         // 订阅ID，创建订阅时生成
-        String subId = "XXX";
+        String subId = "subscription_id";
  
         // 订阅分组，相关概念见以上接口定义（可选）
-        String consumerGroup = "XXX";
+        String consumerGroup = "consumer_group";
  
-        EosClient eosClient = new EosClient(subServerHost, subServerPort, accessKey, accessSecret);
+        EosClient eosClient = new EosClient(host, port, accessKey, secretKey);
  
         // 根据订阅类型获取相应的service，本示例获取告警service
         IAlertService alertService = eosClient.getAlertService();
