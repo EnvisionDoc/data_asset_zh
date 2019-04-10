@@ -10,10 +10,7 @@
      - 描述
    * - $
      - 变量选择符
-     - 使用方法为：`​${ 变量 }`，`变量`必须是模型的某个测点或者属性。
-   * - if
-     - 条件判断语句
-     - 只有当指定条件为 true 时，该语句才会执行代码。格式为：`if (条件) { 只有当条件为 true 时执行的代码 }`
+     - 使用方法为：`​${ 变量 }`，`变量`必须是已创建的模型、模型测点或者属性。
    * - if...else
      - 条件判断语句
      - 当条件为 true 时执行代码，条件为 false 时执行其它代码。格式为：`if (条件) { 当条件为 true 时执行的代码 } else { 当条件不为 true 时执行的代码 }`
@@ -32,17 +29,24 @@
 
 注：多路归并数据处理表达式支持Scala语法，EnOS流数据分析禁止for和while等循环语句。
 
+## 变量自动提示功能
+
+在编写输出逻辑表达式时，输入变量提示符之后，支持自动提示组织内所有的模型、模型测点、模型属性。示例如下：
+
+.. image:: ../media/autocomplete.gif
+
 ## 表达式范例解释
 
 ```scala
-if(${turbine::state}=="Noraml")${turbine::wind_speed}+2*${turbine::power}
+if(${turbine::wind_speed} > 50) {
+    ${turbine::power}+10
+} 
+else {
+    ${turbine::power}-10
+}
 ```
 
-上述表达式的含义是：如果风机的状态为`Normal`，则输出:
-
-```
-wind_speed + 2*power
-```
+上述表达式的含义是：如果 `wind_speed` 大于50，则输出 `power+10`，否则输出 `power-10`。
 
 
 

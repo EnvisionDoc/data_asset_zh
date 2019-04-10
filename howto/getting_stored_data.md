@@ -50,15 +50,15 @@ import java.util.Map;
 
 public class demo {
     public static void main(String[] args) {
-    String enosApiUrl = "https://xxxx.envisioniot.com/enosapi";
-    String accessKey = "a4ba942c-xxxx-4b898ea0cf8c-xxxx-xxxx";
-    String secretKey = "8ea0cf8c-xxxx-xxxx-xxxx-5925cc9cf3fd";
+    String enosApiUrl = "api_service_url";
+    String accessKey = "access_key";
+    String secretKey = "secret_key";
     int connectTimeout = 5000;
     int readTimeout = 5000;
-    String orgId = "o1552032369xxxx";
-    String modelId = "xxxx";
-    String assetIds = "xxxx";
-    String measurepoints = "xxxx";
+    String orgId = "organization_id";
+    String modelId = "model_id";
+    String assetIds = "asset_id";
+    String measurepoints = "measure_point_id";
     String startTime = "2019-03-21T09:00:00-08:00";
     String endTime = "2019-03-26T09:12:00-08:00";
     int pageSize = 100;
