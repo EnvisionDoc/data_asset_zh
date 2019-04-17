@@ -77,6 +77,7 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
   String accessKey ="accessKey";
   String accessSecret ="accessSecret";
   String subId = "subscriptionId";
+  String consumerGroup = "consumerGroup"
   
   /* service */
   EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
@@ -85,15 +86,15 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
   /* handler */
   IAlertHandler alertHandler = new IAlertHandler(){
       @Override
-     public void eventRead(Event event) {
-          System.out.println(event);
+     public void eventRead(Alert alert) {
+          System.out.println(alert);
       }
   };
   
   /* subscribe */
   alertService.subscribe(alertHandler, subId);
   
-  /* subscribe with consumer group */
+  /* subscribe with consumer group (optional) */
   alertService.subscribe(alertHandler, subId, consumerGroup);
   ```
 
