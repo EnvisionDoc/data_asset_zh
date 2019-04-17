@@ -77,7 +77,7 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
   String accessKey ="accessKey";
   String accessSecret ="accessSecret";
   String subId = "subscriptionId";
-  String consumerGroup = "consumerGroup"
+  String consumerGroup = "consumerGroup";
   
   /* service */
   EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
