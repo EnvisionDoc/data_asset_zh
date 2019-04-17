@@ -86,7 +86,7 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
   /* handler */
   IAlertHandler alertHandler = new IAlertHandler(){
       @Override
-     public void eventRead(Alert alert) {
+     public void alertRead(Alert alert) {
           System.out.println(alert);
       }
   };
