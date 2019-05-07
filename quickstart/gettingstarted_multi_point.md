@@ -20,18 +20,18 @@ Feature Type|Name|Identifier|Point Type |Data Type
 Measure Point	 | testA_raw | testA_raw|AI |DOUBLE
 Measure Point	 | testB_raw|testB_raw|AI |DOUBLE
 Measure Point	 | testC|testC|AI |DOUBLE
-- 存储配置：对*testA_raw*、*testB_raw*、*testC*点进行存储配置。这三个测点都可以配置为AI原始数据和AI分钟级归一化数据。具体配置方法，请参考[存储策略配置](https://www.envisioniot.com/docs/data-asset/zh_CN/latest/configuring_tsdb_storage.html)。
+- 存储配置：对*testA_raw*、*testB_raw*、*testC*点进行存储配置。这三个测点都可以配置为AI原始数据和AI分钟级归一化数据。具体配置方法，请参考[配置TSDB存储](https://www.envisioniot.com/docs/data-asset/zh_CN/latest/configuring_tsdb_storage.html)。
 - 数据接入：请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成*testA_raw*和*testB_raw*测点的数据的采集。
 
 ## 操作步骤
 使用多路数据归并处理模板对单设备多测点数据进行处理的步骤如下：
-- 创建并配置多路数据归并处理流
-- 保存并发布流任务
-- 启动流任务
-- 查看流任务任务运行结果
+- 创建并配置多路数据归并处理任务
+- 保存并发布任务
+- 启动任务
+- 查看任务任务运行结果
 
-## 第一步：创建并配置多路数据归并处理流
-1. 进入控制台，点击 **流数据处理 > 流开发** 菜单可浏览当前组织所有已创建的流任务，双击某一流任务，可进行详情查看并编辑
+## 第一步：创建并配置多路数据归并处理任务
+1. 进入控制台，点击 **流数据处理 > 流开发** 菜单可浏览当前组织所有已创建的流数据处理任务，双击某一任务，可进行详情查看并编辑
 
 2. 在任务列表上方，点击  **+** 添加新任务，并选择**Multi Point Merge**模板。
 
@@ -51,17 +51,21 @@ Measure Point	 | testC|testC|AI |DOUBLE
    ```
 
 
-## 第二步：保存并发布流任务
-流任务配置完成后，需要对配置进行保存，保存后可激活发布按钮。点击**发布**，将流任务发布上线。下图为流任务配置示例：
+## 第二步：保存并发布流数据处理任务
+流数据处理任务配置完成后，需要对配置进行保存，保存后可激活发布按钮。点击**发布**，将任务发布上线。下图为任务配置示例：
 
 .. image:: ../media/multi_point_strategy.png
 
-## 第三步：启动流任务
-进入**流数据处理 > 流运维**页面，就能看到已发布的所有流任务了。找到已经发布的流任务，点击**启动**按钮启动流任务。
+## 第三步：启动流数据处理任务
+进入**流数据处理 > 流运维**页面，就能看到已发布的所有流数据处理任务了。找到已经发布的任务，点击**启动**按钮启动任务。
+
+.. note:: - 启动任务之前，需确保组织已分配流数据处理资源。
+
+        - 如有运行中的流数据处理任务，启动新任务前，可暂停一个或多个运行中的任务，然后一并启动需要运行的任务。系统会为启动的任务重新分配计算资源。
 
 ## 第四步：查看任务运行结果
-在**流运维**页面，在**名称**一栏中，点击已启动的流任务名称，可查看流任务运行情况：
+在**流运维**页面，在**名称**一栏中，点击已启动的流数据处理任务名称，可查看任务运行情况：
 
-- **Summary**: 查看流任务运行情况总结，比如整体处理记录统计、各个时间段聚合情况。
-- **Log**: 点击页面右上角**View Logs**图标，可查看流任务运行日志。
-- **Results**: 可通过接口*getAssetsRawDataByTimeRange*来获取输出点*testC*的数据。
+- **Summary**: 查看任务运行情况总结，比如整体处理记录统计、各个时间段聚合情况。
+- **Log**: 点击页面右上角**View Logs**图标，可查看任务运行日志。
+- **Results**: 可通过接口*getAssetsRawDataByTimeRange*来获取输出点*testC*的数据。调用API获取数据的方法和代码示例，请参考[获取TSDB存储数据](../howto/obtain/getting_stored_data.html)。

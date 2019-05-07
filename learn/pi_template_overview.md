@@ -1,0 +1,27 @@
+# 电量计算模板
+
+电量计算模板（Electric Power Calculation）可用于能源领域计算设备的发电量和用电量。对电表上送的数据，通过特定的运算方法配置，计算出某个计算周期内的总电量或特定时间区间内的电量。
+
+## 优势
+
+**计算精度**
+
+采用电表读数分段差值累加法计算电量，提高电量计算精确度。
+
+**异常数据过滤**
+
+支持分段斜率阈值区间设置，过滤异常数据。对电量计算方法的详细介绍，请参考[电量计算逻辑](/docs/data-asset/zh_CN/dev/reference/power_calculation_logic.html)。
+
+**明细电量输出**
+
+电量计算以1天作为计算周期，并可同时输出固定时间间隔的电量明细。
+
+
+
+## 配置电量计算任务
+
+可通过以下两大步骤，使用电量计算模板快速创建流数据处理任务：
+
+1. 创建流数据处理任务时，选择**Electric Power Calculation**模板。详见[创建流数据处理任务](/docs/data-asset/zh_CN/dev/howto/stream/creating_job.html)。
+2. 配置AI数据处理策略。详见[配置电量计算任务](/docs/data-asset/zh_CN/dev/howto/stream/configuring_pi_template.html)。
+
