@@ -9,7 +9,7 @@ EnOS流数据处理中的实时数据流，可以从3个层面来分析：数据
 1. 通过**规则引擎**，不同用户的数据被分发到单独的Kafka Topic中。
 2. 资产原始数据被分发到**Origin Data Topic**中，经过流数据引擎之后的数据被分发到**Cal Data Topic**中。
 3. 流数据处理引擎处理数据的逻辑包括如下2种：
-   - 用户自定义逻辑：你可以通过EnOS控制台中的**流开发**功能设计流数据处理任务。详见[开发流数据处理任务](/docs/data-asset/zh_CN/dev/howto/stream/index.html)。
+   - 用户自定义逻辑：你可以通过EnOS控制台中的**流开发**功能设计流数据处理任务。详见[开发流数据处理任务](/docs/data-asset/zh_CN/latest/howto/stream/index.html)。
    - 系统默认逻辑：系统内置逻辑，可完成数据格式转换等操作。
 
 下图为数据引擎层的数据流图：

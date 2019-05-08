@@ -16,7 +16,7 @@
 
 可使用配套的订阅Java SDK快速开发应用，消费订阅数据。
 
-创建数据订阅任务的步骤，请参考[开发数据订阅任务](/docs/data-asset/zh_CN/dev/howto/obtain/managing_data_subscription.html)。
+创建数据订阅任务的步骤，请参考[开发数据订阅任务](/docs/data-asset/zh_CN/latest/howto/obtain/managing_data_subscription.html)。
 
 ## 性能优势
 - 数据生产与数据消费解耦，消费数据采用pull的消费模式，实现了客户端的流控。

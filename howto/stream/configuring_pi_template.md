@@ -43,8 +43,6 @@
 
 典型的天级电量计算任务的配置，如下图所示：
 
-To be added...
-
 .. image:: ../../media/pi_stream_sample.png
 
 ## 后续操作
