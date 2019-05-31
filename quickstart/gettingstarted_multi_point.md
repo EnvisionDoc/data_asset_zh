@@ -1,5 +1,5 @@
 # 多路数据归并处理
-本教程能帮助你快速学习如何使用多路数据归并处理模板进行单设备多测点间的数据运算处理。
+本教程能帮助你快速学习如何使用**多路归并模板**进行单设备多测点间的数据运算处理。
 ## 前提条件
 - 已被授权流数据处理模块
 - 已接入设备并且设备已经在发送数据
@@ -13,18 +13,18 @@
 
 - 模型配置
 
-本教程使用的模型*testModel*的配置如下：
+本教程使用的模型*test_Model*的配置如下：
 
-Feature Type|Name|Identifier|Point Type |Data Type
+功能类型|名称|标识符|测点类型 |数据类型
 ---|---|---|---|---
-Measure Point	 | testA_raw | testA_raw|AI |DOUBLE
-Measure Point	 | testB_raw|testB_raw|AI |DOUBLE
-Measure Point	 | testC|testC|AI |DOUBLE
+测点	 | testA_raw | testA_raw|AI |DOUBLE
+ 测点     | testB_raw|testB_raw|AI |DOUBLE
+ 测点     | testC|testC|AI |DOUBLE
 - 存储配置：对*testA_raw*、*testB_raw*、*testC*点进行存储配置。这三个测点都可以配置为AI原始数据和AI分钟级归一化数据。具体配置方法，请参考[配置TSDB存储](https://www.envisioniot.com/docs/data-asset/zh_CN/latest/configuring_tsdb_storage.html)。
 - 数据接入：请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成*testA_raw*和*testB_raw*测点的数据的采集。
 
 ## 操作步骤
-使用多路数据归并处理模板对单设备多测点数据进行处理的步骤如下：
+使用**多路归并模板**对单设备多测点数据进行处理的步骤如下：
 - 创建并配置多路数据归并处理任务
 - 保存并发布任务
 - 启动任务
@@ -33,7 +33,7 @@ Measure Point	 | testC|testC|AI |DOUBLE
 ## 第一步：创建并配置多路数据归并处理任务
 1. 进入控制台，点击 **流数据处理 > 流开发** 菜单可浏览当前组织所有已创建的流数据处理任务，双击某一任务，可进行详情查看并编辑
 
-2. 在任务列表上方，点击  **+** 添加新任务，并选择**Multi Point Merge**模板。
+2. 在任务列表上方，点击  **+** 添加新任务，并选择**多路归并模板**。
 
 3. **触发方式设置**：选择**按点触发**的数据处理触发方式；选择**上一个值**作为时序插补策略。
 
@@ -47,7 +47,7 @@ Measure Point	 | testC|testC|AI |DOUBLE
 
    - 输出逻辑：编写输出点的输出逻辑表达式，点击**校验语法**，确保表达式语法正确。此教程中，输出逻辑为：
    ```scala
-   ${testModel::testA_raw}+${testModel::testB_raw}
+   ${test_Model::testA_raw}+${test_Model::testB_raw}
    ```
 
 

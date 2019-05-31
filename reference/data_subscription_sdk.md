@@ -12,12 +12,12 @@
      - 函数说明
      - 参数说明
      - 返回
-   * - EosClient(String host,int port,String accessKey,String accessSecret)
+   * - EosClient(String host,int port,String accessKey,String secretKey)
      - 获取构造函数
      - + host: 订阅服务端地址
        + port: 端口
        + accesskey: accessKey
-       + accessSecret: 对应accesskey的secret
+       + secretKey: 对应accesskey的secret
      - EosClient实例
    * - getDataService()
      - 获取实时数据订阅服务实例
@@ -74,12 +74,12 @@
      - 函数说明
      - 参数说明
      - 返回
-   * - EosClient(String host,int port,String accessKey,String accessSecret)
+   * - EosClient(String host,int port,String accessKey,String secretKey)
      - 获取构造函数
      - + host: 订阅服务端地址
        + port: 端口
        + accesskey: accessKey
-       + accessSecret: 对应accesskey的secret
+       + secretKey: 对应accesskey的secret
      - EosClient实例
    * - getAlertService()
      - 获取告警数据订阅服务实例

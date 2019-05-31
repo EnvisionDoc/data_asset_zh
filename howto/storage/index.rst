@@ -1,17 +1,25 @@
-﻿数据存储管理
+﻿时序数据管理
 =======================
 
+.. contents::
+   :depth: 1
+   :hidden:
+
+EnOS时序数据库（TSDB）为设备上传的实时数据和经流数据处理的数据提供高效和稳定的存储和管理。EnOS TSDB不仅可以存储海量时序数据，还可以对这些数据进行快速查询并做可视化展示。你可根据业务对数据的存储和读取需求，对数据进行分类存储，降低数据存储成本、提升数据读取效率。通过数据洞察功能，可查看设备上传的最新数据，并且对存储在TSDB中的时序数据，可生成基于时间范围和设备测点的数据图表，提高数据分析的效率。
+
 .. toctree::
    :maxdepth: 1
-   :caption: 概述
+   :caption: 存储策略
 
    storage_policy
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: 操作
-
    creating_storage_group
    ../../configuring_tsdb_storage
    editing_storage_group
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 时序洞察
+
+   data_insights
+   generating_data_chart
+

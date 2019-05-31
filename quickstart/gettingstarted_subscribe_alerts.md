@@ -14,10 +14,10 @@
 
 **数据准备**
 
-- **模型配置**：使用的模型（*testModel*）配置如下：
+- **模型配置**：使用的模型（*test_Model*）配置如下：
 
-| 功能类型 | 名称     | ID       | 测点类型 | 数据类型 |
-|:---------|:---------|:---------|:---------|:---------|
+| 功能类型 | 名称     | 标识符   | 测点类型 | 数据类型 |
+| :------- | :------- | :------- | :------- | :------- |
 | 测点     | test_raw | test_raw | AI       | DOUBLE   |
 
 - **数据接入**：*test_raw*为告警数据采集点，请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
@@ -44,7 +44,7 @@
 
 3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 
-4. 选择模型过滤条件：本教程中选择 *testModel* 这个模型作为条件，订阅系统则会过滤出符合模型条件的数据。
+4. 选择模型过滤条件：本教程中选择 *test_Model* 这个模型作为条件，订阅系统则会过滤出符合模型条件的数据。
 
 
 
@@ -74,15 +74,15 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
   ```java
   String sub_server_host ="sub_server_host";
   int sub_server_port ="sub_server_port";
-  String accessKey ="accessKey";
-  String accessSecret ="accessSecret";
+  String accessKey ="access_Key";
+  String secretKey ="secret_Key";
   String subId = "subscriptionId";
   String consumerGroup = "consumerGroup";
   
   /* service */
-  EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
+  EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, secretKey);
   IAlertService alertService = eosClient.getAlertService();
-  
+
   /* handler */
   IAlertHandler alertHandler = new IAlertHandler(){
       @Override
@@ -90,10 +90,10 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
           System.out.println(alert);
       }
   };
-  
+
   /* subscribe */
   alertService.subscribe(alertHandler, subId);
-  
+
   /* subscribe with consumer group (optional) */
   alertService.subscribe(alertHandler, subId, consumerGroup);
   ```
@@ -104,4 +104,4 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 
 ## 第四步：查看数据消费结果
 
-运行订阅消费程序，通过运行日志能查看是否消费到告警数据。
+运行订阅消费程序，通过运行日志能查看应用是否已消费告警数据。

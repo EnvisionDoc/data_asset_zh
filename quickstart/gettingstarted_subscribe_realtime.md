@@ -15,9 +15,9 @@
 
 **数据准备**
 
-- **模型配置**：使用的模型（testModel）配置如下：
+- **模型配置**：使用的模型（*test_Model*）配置如下：
 
-| 功能类型  |   名称     |    ID      | 测点类型 |  数据类型 |
+| 功能类型  |   名称     |    标识符   | 测点类型 |  数据类型 |
 | --------- | --------- | ---------- | -------- | -------- |
 | 测点       | test_raw  | test_raw   |    AI   |  DOUBLE  |
 
@@ -43,7 +43,7 @@
 
 3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 
-4. 选择模型点过滤条件：本教程中选择 *testModel* 的 *test_raw*测点，订阅系统则会过滤出符合模型测点条件的数据。
+4. 选择模型点过滤条件：本教程中选择 *test_Model* 的 *test_raw*测点，订阅系统则会过滤出符合模型测点条件的数据。
 
 
 ## 第二步：保存并启动订阅Topic
@@ -71,12 +71,13 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 ```java
 String sub_server_host ="sub_server_host";
 int sub_server_port ="sub_server_port";
-String accessKey ="accessKey";
-String accessSecret ="accessSecret";
+String accessKey ="access_Key";
+String secretKey ="secret_Key";
 String subId = "subscriptionId";
+String consumerGroup = "consumerGroup";
 
 /* service */
-EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
+EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, secretKey);
 IDataService dataService = eosClient.getDataService();
 
 /* handler */
@@ -99,4 +100,4 @@ dataService.subscribe(dataHandler, subId, consumerGroup);
 
 ## 第四步：查看数据消费结果
 
-运行订阅消费程序，通过运行日志能查看是否消费到实时数据。
+运行订阅消费程序，通过运行日志查看应用是否已消费实时数据。

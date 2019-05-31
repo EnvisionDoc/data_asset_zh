@@ -33,19 +33,20 @@
    :maxdepth: 2
    :caption: 操作
 
-   howto/storage/index
    howto/stream/index
+   howto/storage/index
    howto/obtain/index
+   howto/archive/index
 
 .. toctree::
    :maxdepth: 1
    :caption: 参考信息
 
    reference/time_window
-   reference/power_calculation_logic
    reference/statement_syntax
+   reference/power_calculation_logic
    reference/data_subscription_sdk
-
+   reference/archive_storage
 
 Downloads
 """"""""

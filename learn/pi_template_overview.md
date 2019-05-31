@@ -10,7 +10,7 @@
 
 **异常数据过滤**
 
-支持分段斜率阈值区间设置，过滤异常数据。对电量计算方法的详细介绍，请参考[电量计算逻辑](/docs/data-asset/zh_CN/latest/reference/power_calculation_logic.html)。
+支持分段斜率阈值区间设置，过滤异常数据。对电量计算方法的详细介绍，请参考[电量计算逻辑](/docs/data-asset/zh_CN/dev/reference/power_calculation_logic.html)。
 
 **明细电量输出**
 
@@ -22,6 +22,6 @@
 
 可通过以下两大步骤，使用电量计算模板快速创建流数据处理任务：
 
-1. 创建流数据处理任务时，选择**Electric Power Calculation**模板。详见[创建流数据处理任务](/docs/data-asset/zh_CN/latest/howto/stream/creating_job.html)。
-2. 配置AI数据处理策略。详见[配置电量计算任务](/docs/data-asset/zh_CN/latest/howto/stream/configuring_pi_template.html)。
+1. 创建流数据处理任务时，选择**Electric Power Calculation**模板。详见[创建流数据处理任务](/docs/data-asset/zh_CN/dev/howto/stream/creating_job.html)。
+2. 配置AI数据处理策略。详见[配置电量计算任务](/docs/data-asset/zh_CN/dev/howto/stream/configuring_pi_template.html)。
 

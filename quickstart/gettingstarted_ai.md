@@ -1,6 +1,6 @@
 # AI数据聚合处理
 
-本教程能帮助你快速学习如何使用AI数据聚合处理模板进行AI流数据处理。
+本教程能帮助你快速学习如何使用时间窗口聚合模板进行AI流数据处理。
 
 ## 前提条件
 
@@ -9,7 +9,7 @@
 
 ## 操作步骤
 
-使用AI数据聚合处理模板进行数据处理的步骤如下：
+使用时间窗口聚合模板进行AI流数据处理的步骤如下：
 
 1. 创建并配置AI流数据处理任务
 2. 保存并发布任务
@@ -26,18 +26,19 @@
 
 - 模型配置
 
-本教程使用的模型 (testModel) 配置如下：
+本教程使用的模型 (test_Model) 配置如下：
 
-| Feature Type  | Name      | Identifier | Point Type | Data Type |
-|:--------------|:----------|:-----------|:-----------|:----------|
-| Measure Point | test_raw  | test_raw   | AI         | DOUBLE    |
-| Measure Point | test_5min | test_5min  | AI         | DOUBLE    |
+| 功能类型 | 名称      | 标识符    | 测点类型 | 数据类型 |
+| :------- | :-------- | :-------- | :------- | :------- |
+| 测点     | test_raw  | test_raw  | AI       | DOUBLE   |
+| 测点     | test_5min | test_5min | AI       | DOUBLE   |
 
-.. note:: - 其中 *test_raw* 为原始采集点，*test_5min* 是原始点要经过流式计算聚合后输出的数据点名。
-     - 必须保证需要处理的输入点和输出点的点类型都是AI。
+.. note:: - 其中 *test_raw* 为原始数据采集点，*test_5min* 是原始点要经过流式计算聚合后输出的数据点名称。
+
+     - 必须保证需要处理的输入点和输出点的测点类型相同。
 
 
-- 存储配置：对 *test_raw* 和 *test_5min* 点进行存储配置，*test_raw* 配置成AI原始数据，*test_5min* 配置成AI分钟级规整数据；具体配置请参考[数据存储配置和读取](http://www.envisioniot.com/docs/data-asset/zh_CN/latest/quickstart/gettingstarted_storage_policy.html)。
+- 存储配置：对 *test_raw* 和 *test_5min* 点进行存储配置，为*test_raw* 配置AI原始数据存储类型，为*test_5min* 配置为AI分钟级规整数据存储类型；具体配置请参考[数据存储配置和读取](http://www.envisioniot.com/docs/data-asset/zh_CN/latest/quickstart/gettingstarted_storage_policy.html)。
 - 数据接入：请参考[设备连接](http://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
 
 
@@ -45,7 +46,7 @@
 
 1. 进入控制台，点击 **流数据处理 > 流开发** 菜单可浏览当前组织所有已创建的流数据处理任务。双击某一任务，可进行详情查看并编辑。
 
-2. 在任务列表上方，点击  **+** 号添加新任务。输入任务的名称和描述，模板选择为：*Window Aggregation for AI*。也可以选择导入已有任务配置文件，快速创建新的流数据处理任务。
+2. 在任务列表上方，点击  **+** 号添加新任务。输入流数据处理任务的名称和描述，并选择**时间窗口聚合模板**。也可以选择导入已有任务配置文件，快速创建新的流数据处理任务。
 
 3. 配置流数据处理任务窗口策略
 
@@ -54,7 +55,7 @@
 
 4. 配置流数据处理策略。点击 **新增策略**，列表会新增一条记录。记录的配置项描述如下：
 
-   - **输入点**：选择AI原始数据采集点，本教程中选择 *testModel*的*test_raw* 测点
+   - **输入点**：选择AI原始数据采集点，本教程中选择 *test_Model*的*test_raw* 测点
    - **阈值限定**：对参与计算的数据点进行阈值过滤
    - **插补策略**：对超出阈值范围的数据进行插补，目前只能选择丢弃，即超出阈值范围的数据不参与聚合计算
    - **聚合算法**：设定处理算法，当某一时间窗口在销毁时，会对已到达的该窗口的数据进行处理，本教程选择max算法
@@ -84,3 +85,4 @@
 - **Results**: 可通过接口 *getAssetsAINormalizedData* 来获取输出点 *test_5min* 的分钟级归一化数据。调用API获取数据的方法和代码示例，请参考[获取TSDB存储数据](../howto/obtain/getting_stored_data.html)。
 
 <!--end-->
+
