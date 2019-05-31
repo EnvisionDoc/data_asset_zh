@@ -54,7 +54,7 @@
 ## 第三步：线下使用订阅Java SDK消费订阅数据
 
 EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发并消费订阅数据，请参考如下步骤进行线下开发。
-- 在IDE中引用对应的Maven地址，SDK的Maven仓库地址是：https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.0.0
+- 在IDE中引用对应的Maven地址，SDK的Maven仓库地址是：https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.2.0
 
   IDE中Maven引用示例如下：
 
@@ -62,7 +62,7 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 <dependency>
   <groupId>com.envisioniot</groupId>
   <artifactId>enos-subscribe</artifactId>
-  <version>2.0.0</version>
+  <version>2.2.0</version>
 </dependency>
 ```
 
