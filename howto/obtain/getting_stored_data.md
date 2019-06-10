@@ -24,7 +24,7 @@ EnOS提供的API SDK 支持API请求的封装，签名加密，响应解释，�
 
 你可以通过在Java开发项目的 `pom.xml` 文件中添加Maven依赖来安装EnOS API SDK。具体步骤如下：
 
-1. 访问EnOS API SDK的Maven仓库地址：https://mvnrepository.com/artifact/com.envisioniot/enos-api/2.3.5，获取EnOS API SDK的Maven依赖坐标。
+1. 访问EnOS API SDK的Maven仓库地址：https://mvnrepository.com/artifact/com.envisioniot/enos-api/2.3.6，获取EnOS API SDK的Maven依赖坐标。
 
 2. 打开Java开发环境，将EnOS API SDK的Maven依赖坐标加入到开发项目文件中。如下所示：
 

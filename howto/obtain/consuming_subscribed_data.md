@@ -3,7 +3,8 @@
 
 ## 安装数据订阅SDK
 
-在Java开发项目文件中添加如下Maven依赖，安装数据订阅SDK：
+1. 访问数据订阅SDK的Maven仓库，获取依赖信息：<https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.2.0>
+2. 在Java开发项目文件中添加如下Maven依赖，安装数据订阅SDK：
 
 ```
 <dependency>
