@@ -5,6 +5,7 @@
 
 - 已被授权数据订阅模块
 - 已接入设备并且设备已经在发送数据
+- 订阅数据的服务账号（SA）已被授权获取资产数据
 - 已安装好IDE（IDEA或者Eclipse）的电脑
 
 ## 目标及数据准备
@@ -41,6 +42,8 @@
 1. 创建订阅：点击**添加订阅**按钮，可添加订阅Topic，本教程中选择**告警数据订阅**。
 
 2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考[管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)。
+
+   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考[管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
 
 3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 

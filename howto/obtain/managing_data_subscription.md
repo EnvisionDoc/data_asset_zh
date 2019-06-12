@@ -19,6 +19,8 @@
 
 4. 选择**SA账号**。每个订阅任务都必须关联一个[SA账号](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。系统会动态检测SA账号的有效性并及时更新订阅配置。当订阅关联的SA账号被删除，则该订阅失效。
 
+   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考[管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
+
 5. 输入**订阅描述**。
 
 6. 选择**订阅客户**。根据SA账号的客户数据权限（通过应用购买关系建立），可选择需要订阅的客户数据。当客户解除了对SA账号的授权，与此SA相关的订阅任务会自动解除对该客户数据的订阅。
