@@ -30,8 +30,6 @@ EnOS流数据处理中的实时数据流，可以从3个层面来分析：数据
 
 .. image:: ../media/data_flow_2.png
 
--->
-
 ## 数据应用层
 
 资产原始数据和经流式计算引擎处理之后的数据，都可以通过EnOS控制台中的**数据订阅**功能进行订阅。EnOS提供Java SDK供开发者消费订阅数据，被订阅的资产数据可以直接用于应用开发。有关数据订阅的详细信息，请参考 [开发数据订阅任务](/docs/data-asset/zh_CN/latest/howto/obtain/managing_data_subscription.html)。

@@ -15,6 +15,8 @@
    learn/data_flow
    learn/storage_types
    learn/index
+   learn/data_quality
+   learn/metadata_explorer
    learn/data_subscription_overview
 
 
@@ -27,7 +29,7 @@
    quickstart/gettingstarted_multi_point
    quickstart/gettingstarted_subscribe_realtime
    quickstart/gettingstarted_subscribe_alerts
-
+   quickstart/gettingstarted_quality_report
 
 .. toctree::
    :maxdepth: 2
@@ -35,8 +37,11 @@
 
    howto/stream/index
    howto/storage/index
+   howto/quality/managing_data_quality
+   howto/metadata/exploring_metadata
    howto/obtain/index
    howto/archive/index
+
 
 .. toctree::
    :maxdepth: 1

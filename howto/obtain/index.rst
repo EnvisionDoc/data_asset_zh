@@ -5,7 +5,6 @@
    :maxdepth: 1
    :caption: 操作
 
-   getting_stored_data
    managing_data_subscription
    consuming_subscribed_data
 
