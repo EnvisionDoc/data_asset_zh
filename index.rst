@@ -31,12 +31,6 @@
    quickstart/gettingstarted_subscribe_alerts
    quickstart/gettingstarted_quality_report
 
-.. toctree::
-   :maxdepth: 1
-   :caption: 教程
-
-   tutorial/subscribing_to_device_data/index
-   tutorial/getting_tsdb_data/index
 
 .. toctree::
    :maxdepth: 2
