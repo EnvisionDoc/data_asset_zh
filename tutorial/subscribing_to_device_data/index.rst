@@ -1,7 +1,5 @@
-订阅资产实时数据和告警记录
-====================
-
-注：本教程中文版正在翻译中。谢谢你的访问！
+Subscribing to Device Real-time Data and Alert Records
+======================================
 
 .. toctree::
    :maxdepth: 1

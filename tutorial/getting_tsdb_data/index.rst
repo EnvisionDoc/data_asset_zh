@@ -1,6 +1,5 @@
-﻿获取存储于TSDB的时序数据
+﻿Obtaining Time Series Data
 ================================
-注：本教程中文版正在翻译中。谢谢你的访问！
 
 .. toctree::
    :maxdepth: 1

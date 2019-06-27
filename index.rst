@@ -33,6 +33,14 @@
 
 
 .. toctree::
+   :maxdepth: 1
+   :caption: 教程
+
+   tutorial/subscribing_to_device_data/index
+   tutorial/getting_tsdb_data/index
+
+
+.. toctree::
    :maxdepth: 2
    :caption: 操作
 
