@@ -82,7 +82,6 @@
 
 - **Summary**: 查看任务运行情况总结，比如整体处理记录统计、各个时间段聚合情况。
 - **Log**: 点击页面右上角 **View Logs** 图标，可查看任务运行日志。
-- **Results**: 可通过接口 *getAssetsAINormalizedData* 来获取输出点 *test_5min* 的分钟级归一化数据。调用API获取数据的方法和代码示例，请参考[获取TSDB存储数据](../howto/obtain/getting_stored_data.html)。
+- **Results**: 可通过接口 *Get Asset AI Data with Aggregation Logic* 来获取输出点 *test_5min* 的分钟级归一化数据。调用用Open API的代码示例，请前往 **EnOS控制台 > EnOS API**，查看API文档。
 
 <!--end-->
-

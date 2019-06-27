@@ -16,7 +16,7 @@
 
 本教程使用的模型*test_Model*的配置如下：
 
- 功能类型 |名称| 标识符   | 测点类型 | 数据类型 
+ 功能类型 |名称| 标识符   | 测点类型 | 数据类型
 ---|---|---|---|---
  测点     | test_raw | test_raw|AI |DOUBLE
 
@@ -38,5 +38,4 @@
 
 ### 第三步：使用Open API获取聚合数据
 
-使用AI分钟级规一化数据对应的Open API接口 `getAssetsAINormalizedData`，可获取已存储的测点数据。使用Open API的代码示例，请参考[获取TSDB存储数据](../howto/obtain/getting_stored_data.html)。
-
+使用AI分钟级规一化数据存储类型对应的Open API接口 *Get Asset AI Data with Aggregation Logic*，可获取已存储的测点数据。调用Open API的代码示例，请前往 **EnOS控制台 > EnOS API**，查看API文档。
