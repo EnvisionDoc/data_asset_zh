@@ -5,8 +5,7 @@ Create a model for the electric meter with the following basic settings:
 - **Identifier**: ElectricMeter
 - **Model Name**: ElectricMeter
 - **Category**: Grid
-- **Create From**: No
-- **Support Passthrough**: No
+- **Created From**: No
 - **Source Model**: NA
 - **Description**: Model for electric meter
 

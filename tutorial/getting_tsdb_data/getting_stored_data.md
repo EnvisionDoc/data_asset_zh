@@ -1,6 +1,6 @@
 # Unit 5: Getting Stored Data with EnOS APIs
 
-When storage policies are configured for the data of the smart electric meter, and the stream processing jobs are running, both the raw data uploaded to the Cloud and the data processed by the stream processing engine will be stored in EnOS TSDB. You can now invoke the corresponding API to get the stored data of the electric meter.
+When storage policies are configured for the data of the smart electric meter, and the stream processing jobs are running, both the raw data uploaded to the Cloud and the data processed by the stream processing engine will be stored in EnOS TSDB. You can now invoke the corresponding TSDB Data Service APIs to get the stored data of the electric meter.
 
 ## Installing API Core SDK (Poseidon)
 
@@ -8,7 +8,7 @@ In this tutorial, get the Maven dependency information of the API Core SDK for J
 
 1. Open the Maven repository of the SDK at https://mvnrepository.com/artifact/com.envisioniot/apim-poseidon/0.1.7.
 
-2. Open the development environment, include the maven dependency for the SDK in your Java project. See the following example.
+2. Open the development environment and include the maven dependency for the SDK in your Java project. See the following example.
 
    ```java
    <dependency>
@@ -18,9 +18,9 @@ In this tutorial, get the Maven dependency information of the API Core SDK for J
    </dependency>
    ```
 
-## Programming for getting stored data
+## Programming for getting the stored data
 
-After the API Core SDK for Java is installed, take the following steps to invoke data service APIs to get the stored data in TSDB:
+After the API Core SDK for Java is installed, take the following steps to invoke TSDB Data Service APIs to get the stored data in TSDB:
 
 1. Use the *Get Asset AI Raw Data* API to get the AI type raw data of the electric meter in a time range.
 2. Use the *Get Asset AI Data with Aggregation Logic* API to get the calculated data in a time range.
@@ -42,8 +42,8 @@ Take the following steps to compile the code for the *Get Asset AI Raw Data* API
    ```java
    Request request = new Request();
    request.setQueryParam("orgId", "o1552032369xxxx");
-   request.setQueryParam("modelId", "ElectricAcMeter");
-   request.setQueryParam("assetIds","AYzoMuRP");
+   request.setQueryParam("modelId", "ElectricMeter");
+   request.setQueryParam("assetIds","asset_id");
    request.setQueryParam("measurepoints", "Reading");
    request.setQueryParam("startTime", "2019-03-21T09:00:00-08:00");
    request.setQueryParam("endTime", "2019-03-26T09:12:00-08:00");
@@ -81,8 +81,8 @@ Take the following steps to compile the code for the *Get Asset AI Raw Data* API
    
        Request request = new Request();
        request.setQueryParam("orgId", "o1552032369xxxx");
-       request.setQueryParam("modelId", "ElectricAcMeter");
-       request.setQueryParam("assetIds","AYzoMuRP");
+       request.setQueryParam("modelId", "ElectricMeter");
+       request.setQueryParam("assetIds","asset_id");
        request.setQueryParam("measurepoints", "Reading");
        request.setQueryParam("startTime", "2019-03-21T09:00:00-08:00");
        request.setQueryParam("endTime", "2019-03-26T09:12:00-08:00");
@@ -108,12 +108,12 @@ Take the following steps to compile the code for the *Get Asset AI Raw Data* API
 
    ```java
    DATA: [
-     {assetId=AYzoMuRP, Reading=0.99552613, timestamp=1553234234380},
-     {assetId=AYzoMuRP, Reading=0.68855274, timestamp=1553234234540},
-     {assetId=AYzoMuRP, Reading=0.51011103, timestamp=1553234244631},
-     {assetId=AYzoMuRP, Reading=0.18516362, timestamp=1553234254727},
-     {assetId=AYzoMuRP, Reading=0.80360246, timestamp=1553234264825},
-     {assetId=AYzoMuRP, Reading=0.12011969, timestamp=1553234274934},
+     {assetId=asset_id, Reading=0.99552613, timestamp=1553234234380},
+     {assetId=asset_id, Reading=0.68855274, timestamp=1553234234540},
+     {assetId=asset_id, Reading=0.51011103, timestamp=1553234244631},
+     {assetId=asset_id, Reading=0.18516362, timestamp=1553234254727},
+     {assetId=asset_id, Reading=0.80360246, timestamp=1553234264825},
+     {assetId=asset_id, Reading=0.12011969, timestamp=1553234274934},
      ]
    STATUS：0
    MSG：success
@@ -125,7 +125,7 @@ Take the following steps to compile the code for the *Get Asset AI Raw Data* API
 
 ### Getting calculated data
 
-The data of the *Reading* measuring point processed by the streaming engine is assigned to the *MaxReading10Min* and *MinReading10Min* measuring points, which is stored as AI Normalized Data type.
+The data of the *Reading* measuring point processed by the streaming engine is assigned to the *MaxReading10Min* and *MinReading10Min* measuring points, which is stored as AI Normalized Data type. The difference between the *MaxReading10Min* and *MinReading10Min* measuring points is assigned to the *ReadingDifference* measuring point, which is also stored as AI Normalized Data type.
 
 1. Compile code to call the *Get Asset AI Data with Aggregation Logic* API to get the stored data. See the following example:
 
@@ -159,7 +159,7 @@ The data of the *Reading* measuring point processed by the streaming engine is a
        Request request = new Request();
        request.setQueryParam("orgId", "o1552032369xxxx");
        request.setQueryParam("modelId", "ElectricMeter");
-       request.setQueryParam("assetIds","AYzoMuRP");
+       request.setQueryParam("assetIds","asset_id");
        request.setQueryParam("MaxReading10Min, MinReading10Min, ReadingDifference"); 
        request.setQueryParam("interval", 0);
        request.setQueryParam("startTime", "2019-03-21T09:00:00-08:00");
@@ -186,23 +186,23 @@ The data of the *Reading* measuring point processed by the streaming engine is a
 
    ```java
    DATA：[
-     {assetId=AYzoMuRP, MinReading10Min=0.060317636, timestamp=1553234400000},  
-     {assetId=AYzoMuRP, MinReading10Min=0.00997293, timestamp=1553235000000},
-     {assetId=AYzoMuRP, MinReading10Min=0.0032151341, timestamp=1553235600000},
-     {assetId=AYzoMuRP, MinReading10Min=0.022154748, timestamp=1553236200000},
-     {assetId=AYzoMuRP, MinReading10Min=0.0015020967, timestamp=1553236800000},
+     {assetId=asset_id, MinReading10Min=0.060317636, timestamp=1553234400000},  
+     {assetId=asset_id, MinReading10Min=0.00997293, timestamp=1553235000000},
+     {assetId=asset_id, MinReading10Min=0.0032151341, timestamp=1553235600000},
+     {assetId=asset_id, MinReading10Min=0.022154748, timestamp=1553236200000},
+     {assetId=asset_id, MinReading10Min=0.0015020967, timestamp=1553236800000},
 
-     {assetId=AYzoMuRP, MaxReading10Min=0.97941846, timestamp=1553234400000},
-     {assetId=AYzoMuRP, MaxReading10Min=0.9878034, timestamp=1553235000000},
-     {assetId=AYzoMuRP, MaxReading10Min=0.9939039, timestamp=1553235600000},
-     {assetId=AYzoMuRP, MaxReading10Min=0.9860072, timestamp=1553236200000},
-     {assetId=AYzoMuRP, MaxReading10Min=0.99802256, timestamp=1553236800000},
+     {assetId=asset_id, MaxReading10Min=0.97941846, timestamp=1553234400000},
+     {assetId=asset_id, MaxReading10Min=0.9878034, timestamp=1553235000000},
+     {assetId=asset_id, MaxReading10Min=0.9939039, timestamp=1553235600000},
+     {assetId=asset_id, MaxReading10Min=0.9860072, timestamp=1553236200000},
+     {assetId=asset_id, MaxReading10Min=0.99802256, timestamp=1553236800000},
 
-     {assetId=AYzoMuRP, ReadingDifference=0.919100824, timestamp=1553234400000},
-     {assetId=AYzoMuRP, ReadingDifference=0.97783047, timestamp=1553235000000},
-     {assetId=AYzoMuRP, ReadingDifference=0.9906887659, timestamp=1553235600000},
-     {assetId=AYzoMuRP, ReadingDifference=0.963852452, timestamp=1553236200000},
-     {assetId=AYzoMuRP, ReadingDifference=0.9965204633, timestamp=1553236800000},
+     {assetId=asset_id, ReadingDifference=0.919100824, timestamp=1553234400000},
+     {assetId=asset_id, ReadingDifference=0.97783047, timestamp=1553235000000},
+     {assetId=asset_id, ReadingDifference=0.9906887659, timestamp=1553235600000},
+     {assetId=asset_id, ReadingDifference=0.963852452, timestamp=1553236200000},
+     {assetId=asset_id, ReadingDifference=0.9965204633, timestamp=1553236800000},
      ]
    STATUS：0
    MSG：success

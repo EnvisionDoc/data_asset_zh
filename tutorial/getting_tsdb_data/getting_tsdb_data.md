@@ -2,7 +2,7 @@
 
 ## Scenario
 
-In this tutorial, connect a smart electric meter to EnOS Cloud and ingest the meter reading data. Then, develop stream processing jobs to aggregate the origin meter reading data to get the calculated data that can be used for analysis. Both the origin data and calculated data will be stored in TSDB by the configured storage types and storage time. The stored data can be retrieved with data service APIs.
+In this tutorial, connect a smart electric meter to EnOS Cloud and ingest the meter reading data. Then, develop stream processing jobs to aggregate the origin meter reading data to get the calculated data that can be used for analysis. Both the origin data and calculated data will be stored in TSDB by the configured storage types and storage time. The stored data can be retrieved with the TSDB Data Service APIs.
 
 The scenario is as depicted in the following chart:
 
@@ -14,13 +14,13 @@ This tutorial walks you through a typical path of processing and storing the str
 - Configuring storage policy for the reading data of the electric meter.
 - Developing a stream data processing job to calculate the maximum and minimum values of the meter reading data in every 10 minutes .
 - Developing a stream data processing job to get the difference between the maximum and minimum values of the reading data in every 10 minutes.
-- Invoking EnOS data service APIs to get the stored meter reading data.
+- Invoking EnOS TSDB Data Service APIs to get the stored meter reading data and calculated data.
 
 ### [Start >](modelling_device)
 
 ## Prerequisites
 
-You have completed the *Connecting Devices into EnOS Using SDK* tutorial to understand how to connect a device to EnOS and upload simulated device data to EnOS Cloud.
+You have completed the [Connecting a Simulated Device into EnOS](/docs/device-connection/en/latest/tutorial/connecting_device_simulated/index.html) tutorial to understand how to connect a device to EnOS and upload simulated device data to EnOS Cloud.
 
 You understand how real-time data flows through the engines, the storage, and the applications. For more information, see [Real-time Data Flow](/docs/data-asset/en/latest/learn/data_flow). 
 

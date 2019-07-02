@@ -10,7 +10,7 @@ Create a product with the following basic settings:
 - **Asset Type**: Device
 - **Model**: ElectricMeter
 - **Data Type**: Json
-- **Certificate-based bi-directional authentication**: Disabled
+- **Certificate-Based Authentication**: Disabled
 - **Description**: Smart Electric Meter
 
 ## Register the electric meter device
@@ -20,12 +20,12 @@ Create a smart electric meter device with the following basic settings:
 - **Product**: SmartElectricMeter
 - **Device Name**: Meter01
 - **Use DST**: No
-- **timezone**: UTC+08:00
+- **Time Zone/City**: UTC+08:00
 - **Device Key**: Optional (it can be generated automatically by the system)
 
 ## Perform device-end development and initialize connection
 
-The *Connecting a Simulated Device into EnOS* tutorial describes detailed steps for how to perform device-end development. You can follow the same steps to connect the smart electric meter for this tutorial.
+The [Connecting a Simulated Device into EnOS](/docs/device-connection/en/latest/tutorial/connecting_device_simulated/index.html) tutorial describes detailed steps for how to perform device-end development. You can follow the same steps to connect the smart electric meter into EnOS for this tutorial.
 
 ## Next Unit
 
