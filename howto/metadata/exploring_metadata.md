@@ -17,9 +17,13 @@
 - 名称
 - 测点类型
 
+.. image:: ../../media/metadata_basic_info.png
+
 ### 流式血缘
 
 点击 **流式血缘** 标签，查看与测点相关的流数据处理关系。点击任意节点，查看节点的元数据信息。
+
+.. image:: ../../media/metadata_stream_lineage.png
 
 ### 存储策略
 
