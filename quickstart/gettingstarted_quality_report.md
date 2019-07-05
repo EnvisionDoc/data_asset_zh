@@ -1,8 +1,7 @@
 # 查询数据质量报告
-该教程能帮助你快速学习使用流式计算质量规则stage对数据进行质量打标，并且查询数据质量报告。
+该教程能帮助你快速学习使用流式计算质量规则Stage对数据进行质量打标，并且查询数据质量报告。
 
 ## 前提条件
-- EnOS平台登录账号
 - 已通过资源管理申请开通流数据处理计算资源和TSDB存储资源
 - 已被授予数据质量模块和流数据处理Streamsets模块权限
 - 已接入设备并且设备已经在发送数据
@@ -27,19 +26,19 @@
      - 必须保证需要处理的输入点和输出点的测点类型都是AI类型。
 
 
-- 数据接入：请参考[设备连接](http://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
+- 数据接入：请参考 [设备连接](http://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
 
 
 ## 操作步骤
-数据质量打标并查案质量报告步骤如下：
+数据质量打标并查看质量报告的步骤如下：
 - 创建并编写流数据处理任务对原始数据进行质量打标
 - 保存、发布并启动流任务
 - 查看数据质量报告
 
 ### 第一步：创建并编写流式计算任务对原始数据进行质量打标
 1. 进入 **EnOS 控制台 > 流数据处理 > Streamsets** 菜单，创建并编辑流数据处理任务。
-2. **创建流数据处理任务**：点击 **Create New Pipeline** 按钮，添加流数据处理任务。
-3. **编辑数据处理任务**：进入任务编辑器，使用以下Stage模板，编辑流数据处理任务。具体Stage配置内容如下：
+2. 点击 **Create New Pipeline** 按钮，添加流数据处理任务。
+3. 进入任务编辑器，使用以下Stage模板，编辑流数据处理任务。具体Stage配置内容如下：
 
 No.|Stage 模板|参数配置|说明 
 ---|---|---|---
@@ -58,5 +57,5 @@ No.|Stage 模板|参数配置|说明
 配置好流数据处理任务之后，点击Start图标，启动任务。返回至任务列表页面，可查看任务运行状态。
 
 ### 第三步：查看数据质量报告
-进入**EnOS 控制台 > 数据质量** 模块，输入查询条件（模型：*testModel*；测点：*test_raw_dq*），查询测点的数据质量报告。数据质量报告的详细介绍，请参考[数据质量管理](../howto/quality/managing_data_quality)。
+进入**EnOS 控制台 > 数据质量** 模块，输入查询条件（模型：*testModel*；测点：*test_raw_dq*），查询测点的数据质量报告。数据质量报告的详细介绍，请参考 [数据质量管理](../howto/quality/managing_data_quality)。
 

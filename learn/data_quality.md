@@ -17,7 +17,7 @@
 
   数据的上送是否及时，是否有延迟。
 
-对数据质量维度的详细介绍以及查看数据质量报告，请参考[数据质量管理](../howto/quality/managing_data_quality)。
+对数据质量维度的详细介绍以及查看数据质量报告，请参考 [数据质量管理](../howto/quality/managing_data_quality)。
 
 ## 产品优势
 
@@ -25,4 +25,4 @@
 - 可视化质量报表查询
 
 ## 使用限制
-- 数据质量规则是通过在流数据处理任务中配置相关Stage来设置的。更多详细信息，请参考[查询数据质量报告](../quickstart/gettingstarted_quality_report)。
+- 数据质量规则是通过在流数据处理任务中配置相关Stage来设置的。更多详细信息，请参考 [查询数据质量报告](../quickstart/gettingstarted_quality_report)。
