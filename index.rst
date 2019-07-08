@@ -29,7 +29,6 @@
    quickstart/gettingstarted_multi_point
    quickstart/gettingstarted_subscribe_realtime
    quickstart/gettingstarted_subscribe_alerts
-   quickstart/gettingstarted_quality_report
 
 
 .. toctree::
