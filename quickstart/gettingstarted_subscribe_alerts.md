@@ -11,6 +11,7 @@
 ## 目标及数据准备
 
 **目标场景**
+
 实现的场景：对原始AI采集点 *test_raw* 进行告警配置，并订阅其告警数据。
 
 **数据准备**
@@ -18,7 +19,7 @@
 - **模型配置**：使用的模型（*test_Model*）配置如下：
 
 | 功能类型 | 名称     | 标识符   | 测点类型 | 数据类型 |
-| :------- | :------- | :------- | :------- | :------- |
+|:---------|:---------|:---------|:---------|:---------|
 | 测点     | test_raw | test_raw | AI       | DOUBLE   |
 
 - **数据接入**：*test_raw*为告警数据采集点，请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。

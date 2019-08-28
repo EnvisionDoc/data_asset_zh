@@ -1,0 +1,725 @@
+{
+  "pipelineConfig" : {
+    "schemaVersion" : 5,
+    "version" : 9,
+    "pipelineId" : "StreamsetsPipelineDemo2d030c15-37f5-4dda-8acb-3984bd8661b0",
+    "title" : "StreamsetsPipelineDemo",
+    "description" : "",
+    "uuid" : "992b22d8-0745-4faa-be84-d3fc5ddb88a1",
+    "configuration" : [ {
+      "name" : "executionMode",
+      "value" : "CLUSTER_YARN_STREAMING"
+    }, {
+      "name" : "edgeHttpUrl",
+      "value" : "http://localhost:18633"
+    }, {
+      "name" : "deliveryGuarantee",
+      "value" : "AT_LEAST_ONCE"
+    }, {
+      "name" : "startEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "stopEventStage",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "shouldRetry",
+      "value" : true
+    }, {
+      "name" : "retryAttempts",
+      "value" : -1
+    }, {
+      "name" : "memoryLimit",
+      "value" : "${jvm:maxMemoryMB() * 0.85}"
+    }, {
+      "name" : "memoryLimitExceeded",
+      "value" : "LOG"
+    }, {
+      "name" : "notifyOnStates",
+      "value" : [ "RUN_ERROR", "STOPPED", "FINISHED" ]
+    }, {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "constants",
+      "value" : [ ]
+    }, {
+      "name" : "badRecordsHandling",
+      "value" : "streamsets-datacollector-basic-lib::com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget::1"
+    }, {
+      "name" : "errorRecordPolicy",
+      "value" : "ORIGINAL_RECORD"
+    }, {
+      "name" : "workerCount",
+      "value" : 1
+    }, {
+      "name" : "clusterSlaveMemory",
+      "value" : 1600
+    }, {
+      "name" : "clusterSlaveJavaOpts",
+      "value" : "-XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dlog4j.debug"
+    }, {
+      "name" : "clusterLauncherEnv",
+      "value" : [ ]
+    }, {
+      "name" : "mesosDispatcherURL",
+      "value" : null
+    }, {
+      "name" : "hdfsS3ConfDir",
+      "value" : null
+    }, {
+      "name" : "rateLimit",
+      "value" : 0
+    }, {
+      "name" : "maxRunners",
+      "value" : 0
+    }, {
+      "name" : "shouldCreateFailureSnapshot",
+      "value" : true
+    }, {
+      "name" : "runnerIdleTIme",
+      "value" : 60
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    }, {
+      "name" : "sparkConfigs",
+      "value" : [ {
+        "value" : "/opt/jdk1.8.0_60",
+        "key" : "spark.executorEnv.JAVA_HOME"
+      }, {
+        "value" : "/opt/jdk1.8.0_60",
+        "key" : "spark.yarn.appMasterEnv.JAVA_HOME"
+      }, {
+        "value" : "root.streaming_xxx",
+        "key" : "spark.yarn.queue"
+      }, {
+        "value" : "300000",
+        "key" : "spark.streaming.blockInterval"
+      }, {
+        "value" : "5",
+        "key" : "spark.streaming.kafka.consumer.poll.max.retries"
+      }, {
+        "value" : "-Duser.home=.",
+        "key" : "spark.driver.extraJavaOptions"
+      }, {
+        "value" : "-Duser.home=.",
+        "key" : "spark.executor.extraJavaOptions"
+      }, {
+        "value" : "false",
+        "key" : "spark.streaming.dynamicAllocation.enabled"
+      }, {
+        "value" : "300",
+        "key" : "spark.streaming.dynamicAllocation.scalingInterval"
+      }, {
+        "value" : "1",
+        "key" : "spark.streaming.dynamicAllocation.minExecutors"
+      }, {
+        "value" : "true",
+        "key" : "spark.streaming.backpressure.enabled"
+      }, {
+        "key" : "spark.driver.memory",
+        "value" : "1600m"
+      } ]
+    }, {
+      "name" : "statsAggregatorStage",
+      "value" : ""
+    } ],
+    "uiInfo" : {
+      "previewConfig" : {
+        "previewSource" : "CONFIGURED_SOURCE",
+        "batchSize" : 10,
+        "timeout" : 30000,
+        "writeToDestinations" : false,
+        "executeLifecycleEvents" : false,
+        "showHeader" : false,
+        "showFieldType" : true,
+        "rememberMe" : false
+      }
+    },
+    "fragments" : [ ],
+    "stages" : [ {
+      "instanceName" : "EDHKafkaConsumerUser_01",
+      "library" : "streamsets-datacollector-edh-cluster-kafka_0_10-spark_2_0-lib_user",
+      "stageName" : "com_streamsets_pipeline_stage_origin_kafka_cluster_KafkaDSourceUser",
+      "stageVersion" : "5",
+      "configuration" : [ {
+        "name" : "kafkaConfigBean.dataFormatConfig.filePatternInArchive",
+        "value" : "*"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.charset",
+        "value" : "UTF-8"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.removeCtrlChars",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.textMaxLineLen",
+        "value" : 1024
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.useCustomDelimiter",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.customDelimiter",
+        "value" : "\\r\\n"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.includeCustomDelimiterInTheText",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.jsonContent",
+        "value" : "MULTIPLE_OBJECTS"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.jsonMaxObjectLen",
+        "value" : 4096000
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvFileFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvHeader",
+        "value" : "NO_HEADER"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvAllowExtraColumns",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvExtraColumnPrefix",
+        "value" : "_extra_"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvMaxObjectLen",
+        "value" : 1024
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvCustomDelimiter",
+        "value" : "|"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvCustomEscape",
+        "value" : "\\"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvCustomQuote",
+        "value" : "\""
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvEnableComments",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvCommentMarker",
+        "value" : "#"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvIgnoreEmptyLines",
+        "value" : true
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvRecordType",
+        "value" : "LIST_MAP"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.csvSkipStartLines",
+        "value" : 0
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.parseNull",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.nullConstant",
+        "value" : "\\\\N"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.xmlRecordElement",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.includeFieldXpathAttributes",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.xPathNamespaceContext",
+        "value" : [ ]
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.outputFieldAttributes",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.xmlMaxObjectLen",
+        "value" : 4096000
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.logMode",
+        "value" : "COMMON_LOG_FORMAT"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.logMaxObjectLen",
+        "value" : 1024
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.retainOriginalLine",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.customLogFormat",
+        "value" : "%h %l %u %t \"%r\" %>s %b"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.regex",
+        "value" : "^(\\S+) (\\S+) (\\S+) \\[([\\w:/]+\\s[+\\-]\\d{4})\\] \"(\\S+) (\\S+) (\\S+)\" (\\d{3}) (\\d+)"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.fieldPathsToGroupName",
+        "value" : [ {
+          "fieldPath" : "/",
+          "group" : 1
+        } ]
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.grokPatternDefinition",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.grokPattern",
+        "value" : "%{COMMONAPACHELOG}"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.onParseError",
+        "value" : "ERROR"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.maxStackTraceLines",
+        "value" : 50
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.enableLog4jCustomLogFormat",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.log4jCustomLogFormat",
+        "value" : "%r [%t] %-5p %c %x - %m%n"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.avroSchemaSource",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.avroSchema",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.schemaRegistryUrls",
+        "value" : [ ]
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.schemaLookupMode",
+        "value" : "SUBJECT"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.subject",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.schemaId",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.protoDescriptorFile",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.messageType",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.isDelimited",
+        "value" : true
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.binaryMaxObjectLen",
+        "value" : 1024
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.datagramMode",
+        "value" : "SYSLOG"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.typesDbPath",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.convertTime",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.excludeInterval",
+        "value" : true
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.authFilePath",
+        "value" : null
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.netflowOutputValuesMode",
+        "value" : "RAW_AND_INTERPRETED"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.maxTemplateCacheSize",
+        "value" : -1
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.templateCacheTimeoutMs",
+        "value" : -1
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.netflowOutputValuesModeDatagram",
+        "value" : "RAW_AND_INTERPRETED"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.maxTemplateCacheSizeDatagram",
+        "value" : -1
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.templateCacheTimeoutMsDatagram",
+        "value" : -1
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.wholeFileMaxObjectLen",
+        "value" : 8192
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.rateLimit",
+        "value" : "-1"
+      }, {
+        "name" : "kafkaConfigBean.dataFormatConfig.verifyChecksum",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.dataFormat",
+        "value" : "JSON"
+      }, {
+        "name" : "kafkaConfigBean.consumerGroup",
+        "value" : "xxxx"
+      }, {
+        "name" : "kafkaConfigBean.topic",
+        "value" : "MEASURE_POINT_INTERNAL"
+      }, {
+        "name" : "kafkaConfigBean.produceSingleRecordPerMessage",
+        "value" : false
+      }, {
+        "name" : "kafkaConfigBean.maxBatchSize",
+        "value" : 20
+      }, {
+        "name" : "kafkaConfigBean.maxWaitTime",
+        "value" : 10000
+      }, {
+        "name" : "kafkaConfigBean.maxRatePerPartition",
+        "value" : 60
+      }, {
+        "name" : "kafkaConfigBean.keyDeserializer",
+        "value" : "STRING"
+      }, {
+        "name" : "kafkaConfigBean.valueDeserializer",
+        "value" : "DEFAULT"
+      }, {
+        "name" : "kafkaConfigBean.kafkaConsumerConfigs",
+        "value" : [ {
+          "key" : "auto.offset.reset",
+          "value" : "latest"
+        } ]
+      }, {
+        "name" : "stageOnRecordError",
+        "value" : "TO_ERROR"
+      } ],
+      "uiInfo" : {
+        "yPos" : 162,
+        "stageType" : "SOURCE",
+        "rawSource" : {
+          "configuration" : [ {
+            "name" : "brokerHost",
+            "value" : "localhost"
+          }, {
+            "name" : "brokerPort",
+            "value" : 9092
+          }, {
+            "name" : "topic",
+            "value" : "myTopic"
+          }, {
+            "name" : "partition",
+            "value" : 0
+          }, {
+            "name" : "maxWaitTime",
+            "value" : 1000
+          } ]
+        },
+        "description" : "",
+        "label" : "Data Souce",
+        "xPos" : 727
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ "EDHKafkaConsumerUser_01OutputLane15610175272980" ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    }, {
+      "instanceName" : "EDHKafkaProducer_01",
+      "library" : "streamsets-datacollector-edh-cluster-kafka_0_10-spark_2_0-lib_user",
+      "stageName" : "com_streamsets_pipeline_stage_destination_kafka_cluster_KafkaDTargetUser",
+      "stageVersion" : "3",
+      "configuration" : [ {
+        "name" : "conf.dataFormat",
+        "value" : "JSON"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.charset",
+        "value" : "UTF-8"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvFileFormat",
+        "value" : "CSV"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvHeader",
+        "value" : "NO_HEADER"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvReplaceNewLines",
+        "value" : true
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvReplaceNewLinesString",
+        "value" : " "
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvCustomDelimiter",
+        "value" : "|"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvCustomEscape",
+        "value" : "\\"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.csvCustomQuote",
+        "value" : "\""
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.jsonMode",
+        "value" : "MULTIPLE_OBJECTS"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.textFieldPath",
+        "value" : "/text"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.textRecordSeparator",
+        "value" : "\\n"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.textFieldMissingAction",
+        "value" : "ERROR"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.textEmptyLineIfNull",
+        "value" : false
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.avroSchemaSource",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.avroSchema",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.registerSchema",
+        "value" : false
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.schemaRegistryUrlsForRegistration",
+        "value" : [ ]
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.schemaRegistryUrls",
+        "value" : [ ]
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.schemaLookupMode",
+        "value" : "SUBJECT"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.subject",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.subjectToRegister",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.schemaId",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.includeSchema",
+        "value" : true
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.avroCompression",
+        "value" : "NULL"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.binaryFieldPath",
+        "value" : "/"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.protoDescriptorFile",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.messageType",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.fileNameEL",
+        "value" : null
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.wholeFileExistsAction",
+        "value" : "TO_ERROR"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.includeChecksumInTheEvents",
+        "value" : false
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.checksumAlgorithm",
+        "value" : "MD5"
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.xmlPrettyPrint",
+        "value" : true
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.xmlValidateSchema",
+        "value" : false
+      }, {
+        "name" : "conf.dataGeneratorFormatConfig.xmlSchema",
+        "value" : null
+      }, {
+        "name" : "conf.topicExpression",
+        "value" : "${record:value('/topic')}"
+      }, {
+        "name" : "conf.topicWhiteList",
+        "value" : "*"
+      }, {
+        "name" : "conf.topic",
+        "value" : "MEASURE_POINT_INTERNAL"
+      }, {
+        "name" : "conf.partitionStrategy",
+        "value" : "DEFAULT"
+      }, {
+        "name" : "conf.partition",
+        "value" : "${record:value('/\"assetId\"')}${record:value('/\"pointId\"')}"
+      }, {
+        "name" : "conf.singleMessagePerBatch",
+        "value" : false
+      }, {
+        "name" : "conf.keySerializer",
+        "value" : "STRING"
+      }, {
+        "name" : "conf.valueSerializer",
+        "value" : "DEFAULT"
+      }, {
+        "name" : "conf.kafkaProducerConfigs",
+        "value" : [ ]
+      }, {
+        "name" : "stageOnRecordError",
+        "value" : "TO_ERROR"
+      }, {
+        "name" : "stageRequiredFields",
+        "value" : [ ]
+      }, {
+        "name" : "stageRecordPreconditions",
+        "value" : [ ]
+      } ],
+      "uiInfo" : {
+        "description" : "",
+        "label" : "Data Distination",
+        "xPos" : 1039.7161865234375,
+        "yPos" : 164.00796508789062,
+        "stageType" : "TARGET"
+      },
+      "inputLanes" : [ "EDHKafkaConsumerUser_01OutputLane15610175272980" ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    } ],
+    "errorStage" : {
+      "instanceName" : "EDHDiscard_ErrorStage",
+      "library" : "streamsets-datacollector-basic-lib",
+      "stageName" : "com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget",
+      "stageVersion" : "1",
+      "configuration" : [ ],
+      "uiInfo" : {
+        "description" : "",
+        "label" : "Error Records - EDH Discard",
+        "xPos" : 407,
+        "yPos" : 50,
+        "stageType" : "TARGET"
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    },
+    "info" : {
+      "pipelineId" : "StreamsetsPipelineDemo2d030c15-37f5-4dda-8acb-3984bd8661b0",
+      "title" : "StreamsetsPipelineDemo",
+      "description" : "",
+      "created" : 1563859366099,
+      "lastModified" : 1563859494874,
+      "creator" : "wizard_admin",
+      "lastModifier" : "wizard_admin",
+      "lastRev" : "0",
+      "uuid" : "992b22d8-0745-4faa-be84-d3fc5ddb88a1",
+      "valid" : true,
+      "metadata" : {
+        "labels" : [ ]
+      },
+      "name" : "StreamsetsPipelineDemo2d030c15-37f5-4dda-8acb-3984bd8661b0",
+      "sdcVersion" : "3.3.2-SNAPSHOT",
+      "sdcId" : "1c924014-7ad5-11e9-977d-03cf24e55cad"
+    },
+    "metadata" : {
+      "labels" : [ ]
+    },
+    "statsAggregatorStage" : null,
+    "startEventStages" : [ {
+      "instanceName" : "EDHDiscard_StartEventStage",
+      "library" : "streamsets-datacollector-basic-lib",
+      "stageName" : "com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget",
+      "stageVersion" : "1",
+      "configuration" : [ ],
+      "uiInfo" : {
+        "description" : "",
+        "label" : "Start Event - EDH Discard",
+        "xPos" : 407,
+        "yPos" : 50,
+        "stageType" : "TARGET"
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    } ],
+    "stopEventStages" : [ {
+      "instanceName" : "EDHDiscard_StopEventStage",
+      "library" : "streamsets-datacollector-basic-lib",
+      "stageName" : "com_streamsets_pipeline_stage_destination_devnull_ToErrorNullDTarget",
+      "stageVersion" : "1",
+      "configuration" : [ ],
+      "uiInfo" : {
+        "description" : "",
+        "label" : "Stop Event - EDH Discard",
+        "xPos" : 407,
+        "yPos" : 50,
+        "stageType" : "TARGET"
+      },
+      "inputLanes" : [ ],
+      "outputLanes" : [ ],
+      "eventLanes" : [ ],
+      "services" : [ ]
+    } ],
+    "valid" : true,
+    "issues" : {
+      "issueCount" : 0,
+      "stageIssues" : { },
+      "pipelineIssues" : [ ]
+    },
+    "previewable" : true
+  },
+  "pipelineRules" : {
+    "schemaVersion" : 3,
+    "version" : 2,
+    "metricsRuleDefinitions" : [ {
+      "id" : "badRecordsAlertID",
+      "alertText" : "High incidence of Error Records",
+      "metricId" : "pipeline.batchErrorRecords.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1560854340056,
+      "valid" : true
+    }, {
+      "id" : "stageErrorAlertID",
+      "alertText" : "High incidence of Stage Errors",
+      "metricId" : "pipeline.batchErrorMessages.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > 100}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1560854340056,
+      "valid" : true
+    }, {
+      "id" : "idleGaugeID",
+      "alertText" : "Pipeline is Idle",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "TIME_OF_LAST_RECEIVED_RECORD",
+      "condition" : "${time:now() - value() > 120000}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1560854340056,
+      "valid" : true
+    }, {
+      "id" : "batchTimeAlertID",
+      "alertText" : "Batch taking more time to process",
+      "metricId" : "RuntimeStatsGauge.gauge",
+      "metricType" : "GAUGE",
+      "metricElement" : "CURRENT_BATCH_AGE",
+      "condition" : "${value() > 200}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1560854340056,
+      "valid" : true
+    }, {
+      "id" : "memoryLimitAlertID",
+      "alertText" : "Memory limit for pipeline exceeded",
+      "metricId" : "pipeline.memoryConsumed.counter",
+      "metricType" : "COUNTER",
+      "metricElement" : "COUNTER_COUNT",
+      "condition" : "${value() > (jvm:maxMemoryMB() * 0.65)}",
+      "sendEmail" : false,
+      "enabled" : false,
+      "timestamp" : 1560854340056,
+      "valid" : true
+    } ],
+    "dataRuleDefinitions" : [ ],
+    "driftRuleDefinitions" : [ ],
+    "uuid" : "01b9881f-0c4f-43a4-a53b-7d03d2184359",
+    "configuration" : [ {
+      "name" : "emailIDs",
+      "value" : [ ]
+    }, {
+      "name" : "webhookConfigs",
+      "value" : [ ]
+    } ],
+    "ruleIssues" : [ ],
+    "configIssues" : [ ]
+  },
+  "libraryDefinitions" : null
+}

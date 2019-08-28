@@ -59,7 +59,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'EnOS Data Asset Management'
+project = u'EnOS Data Asset'
 copyright = u'2018, EnOS'
 author = u'Envision Digital'
 
@@ -244,25 +244,18 @@ latex_elements = {
         \begin{titlepage}
             \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{bg.png}}
 
-            \vspace*{15mm} %%% * is used to give space from top
-            \fontsize{40pt}{\baselineskip}\selectfont \textbf{EnOS}
+            \vspace*{170mm} %%% * is used to give space from top
+            \fontsize{30pt}{\baselineskip}\selectfont \textbf{EnOS}
 
             \vspace{5mm}
 
-            \fontsize{40pt}{\baselineskip}\selectfont \textbf{数据资产管理}
+            \fontsize{30pt}{\baselineskip}\selectfont \textbf{数据资产管理}
 
             \vspace{5mm}
 
             \huge \textmd{版本}\textbf{ latest}
             %% \vfill adds at the bottom
             \vfill
-                       \centering
-                       \fontsize{16pt}{\baselineskip}\selectfont \textbf{远景智能}
-
-                       \vspace{3mm}
-
-                       \renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
-                       \today\\
         \end{titlepage}
 
         \clearpage
@@ -303,7 +296,7 @@ latex_show_urls = 'footnote'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset Management',
+    (master_doc, u'enosdocumentationcenter', u'EnOS Fundamental',
      [author], 1)
 ]
 
@@ -314,7 +307,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset Management',
+    (master_doc, 'EnOSDocumentationCenter', 'EnOS Fundamental',
      author, 'EnOSDocumentationCenter', 'One line description of project.',
      'Miscellaneous'),
 ]
@@ -327,7 +320,7 @@ texinfo_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset Management',
+    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset',
      [author], 1)
 ]
 
@@ -338,8 +331,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset Management',
-     author, 'EnOSDocumentationCenter', 'Product documentation about EnOS Data Asset Management.',
+    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset',
+     author, 'EnOSDocumentationCenter', 'Product documentation about EnOS Data Asset.',
      'Miscellaneous'),
 ]
 

@@ -7,6 +7,7 @@
 2. 配置流数据处理策略
 3. 保存及发布流数据处理任务
 4. 运行及维护流数据处理任务
+5. 使用StreamSets算子进行开发
 
 
 .. toctree::
@@ -19,6 +20,7 @@
    configuring_pi_template
    publishing_job
    monitoring_job
+   streamsets
 
 
 .. toctree::

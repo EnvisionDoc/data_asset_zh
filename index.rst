@@ -32,20 +32,12 @@
 
 
 .. toctree::
-   :maxdepth: 1
-   :caption: 教程
-
-   tutorial/subscribing_to_device_data/index
-   tutorial/getting_tsdb_data/index
-
-
-.. toctree::
    :maxdepth: 2
    :caption: 操作
 
    howto/stream/index
    howto/storage/index
-   howto/quality/managing_data_quality
+   howto/quality/index
    howto/metadata/exploring_metadata
    howto/obtain/index
    howto/archive/index
@@ -60,10 +52,4 @@
    reference/power_calculation_logic
    reference/data_subscription_sdk
    reference/archive_storage
-
-Downloads
-""""""""
-    pdf_ htmlzip_ epub_
-.. _pdf: https://www.envisioniot.com/projects/online-data/downloads/pdf/latest/
-.. _htmlzip: https://www.envisioniot.com/projects/online-data/downloads/htmlzip/latest/
-.. _epub: https://www.envisioniot.com/projects/online-data/downloads/epub/latest/
+   reference/streamsets/index

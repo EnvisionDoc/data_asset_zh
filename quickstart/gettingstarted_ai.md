@@ -1,6 +1,6 @@
-# AI数据聚合处理
+# 数值型数据聚合处理
 
-本教程能帮助你快速学习如何使用时间窗口聚合模板进行AI流数据处理。
+本教程能帮助你快速学习如何使用时间窗口聚合模板对数值类型流数据进行聚合处理。
 
 ## 前提条件
 
@@ -9,9 +9,9 @@
 
 ## 操作步骤
 
-使用时间窗口聚合模板进行AI流数据处理的步骤如下：
+使用时间窗口聚合模板进行数值类型流数据处理的步骤如下：
 
-1. 创建并配置AI流数据处理任务
+1. 创建并配置流数据处理任务
 2. 保存并发布任务
 3. 启动任务
 4. 查看任务运行结果
@@ -29,7 +29,7 @@
 本教程使用的模型 (*test_Model*) 配置如下：
 
 | 功能类型 | 名称      | 标识符    | 测点类型 | 数据类型 |
-| :------- | :-------- | :-------- | :------- | :------- |
+|:---------|:----------|:----------|:---------|:---------|
 | 测点     | test_raw  | test_raw  | AI       | DOUBLE   |
 | 测点     | test_5min | test_5min | AI       | DOUBLE   |
 
@@ -38,15 +38,15 @@
      - 必须保证需要处理的输入点和输出点的测点类型相同。
 
 
-- 存储配置：对 *test_raw* 和 *test_5min* 点进行存储配置，为*test_raw* 配置AI原始数据存储类型，为*test_5min* 配置为AI分钟级规整数据存储类型；具体配置请参考[数据存储配置和读取](http://www.envisioniot.com/docs/data-asset/zh_CN/latest/quickstart/gettingstarted_storage_policy.html)。
-- 数据接入：请参考[设备连接](http://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
+- 存储配置：对 *test_raw* 和 *test_5min* 点进行存储配置，为 *test_raw* 配置AI原始数据存储类型，为 *test_5min* 配置为AI分钟级规整数据存储类型；具体配置请参考 [数据存储配置和读取](http://www.envisioniot.com/docs/data-asset/zh_CN/latest/quickstart/gettingstarted_storage_policy.html)。
+- 数据接入：请参考 [设备连接](http://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
 
 
-## 第一步：创建并配置AI流数据处理任务
+## 第一步：创建并配置流数据处理任务
 
 1. 进入控制台，点击 **流数据处理 > 流开发** 菜单可浏览当前组织所有已创建的流数据处理任务。双击某一任务，可进行详情查看并编辑。
 
-2. 在任务列表上方，点击  **+** 号添加新任务。输入流数据处理任务的名称和描述，并选择**时间窗口聚合模板**。也可以选择导入已有任务配置文件，快速创建新的流数据处理任务。
+2. 在任务列表上方，点击  **+** 号添加新任务。输入流数据处理任务的名称和描述，并选择 **时间窗口聚合模板**。也可以选择导入已有任务配置文件，快速创建新的流数据处理任务。
 
 3. 配置流数据处理任务窗口策略
 
