@@ -27,6 +27,7 @@
    quickstart/gettingstarted_storage_policy
    quickstart/gettingstarted_ai
    quickstart/gettingstarted_multi_point
+   quickstart/gettingstarted_quality_report
    quickstart/gettingstarted_subscribe_realtime
    quickstart/gettingstarted_subscribe_alerts
 

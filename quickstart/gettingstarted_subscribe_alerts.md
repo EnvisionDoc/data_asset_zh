@@ -22,8 +22,8 @@
 |:---------|:---------|:---------|:---------|:---------|
 | 测点     | test_raw | test_raw | AI       | DOUBLE   |
 
-- **数据接入**：*test_raw*为告警数据采集点，请参考 [设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
-- **告警配置**：请参考 [资产告警](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/howto/alert/alert_overview.html) 来完成 *test_raw* 点数据的告警配置。
+- **数据接入**：*test_raw*为告警数据采集点，请参考 [设备连接](/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
+- **告警配置**：请参考 [资产告警](/docs/device-connection/zh_CN/latest/howto/alert/alert_overview.html) 来完成 *test_raw* 点数据的告警配置。
 
 
 ## 操作步骤
@@ -42,7 +42,7 @@
 
 1. 创建订阅：点击**添加订阅**按钮，可添加订阅Topic，本教程中选择**告警数据订阅**。
 
-2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考 [管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)。
+2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考 [管理应用](/docs/app-development/zh_CN/latest/managing_apps.html)。
 
    .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考 [管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
 
