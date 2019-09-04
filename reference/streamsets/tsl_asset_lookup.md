@@ -34,13 +34,13 @@
 
 ### Config
 
-| 名称                  | 是否必须 | 描述                                                                                                                                     |
-|:----------------------|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| Enable User-Defined   | No       | 是否支持用户自定义需要获取主数据信息的asset                                                                                              |
-| User-Defined Asset Id | No       | 支持通过自定义表达式获取满足条件的asset；比如：${record:value('/attr/xxx')}表示以record下attr字段的xxx的value为assetId条件获取主数据信息 |
-| Attributes            | No       | 属性条件，只返回指定属性条件的属性值                                                                                                     |
-| Tags                  | No       | tag条件，只返回指定tag id的tag value                                                                                                     |
-| Timezone              | No       | 是否开启获取资产的Timezone信息                                                                                                           |
+| 名称               | 是否必须 | 描述                                                     |
+| :----------------- | :------- | :------------------------------------------------------- |
+|Enable User-Defined   | No      | 是否支持用户自定义需要获取主数据信息的asset|
+| User-Defined Asset Id   | No |不建议使用此功能|
+| Attributes   | No | 属性条件，只返回指定属性条件的属性值|
+| Tags  | No | tag条件，只返回指定tag id的tag value|
+| Timezone  | No | 是否开启获取资产的Timezone信息|
 
 ## 输出结果
 

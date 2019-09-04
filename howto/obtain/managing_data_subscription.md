@@ -7,7 +7,7 @@
 ## 创建订阅任务
 通过以下步骤，创建数据订阅任务：
 
-1. 进入EnOS控制台**数据订阅**页面，点击**添加订阅**按钮进入订阅配置页面。
+1. 进入EnOS控制台 **数据订阅** 页面，点击 **添加订阅** 按钮进入订阅配置页面。
 
    .. note:: 单个组织下最多可创建5个订阅任务。
 
@@ -17,9 +17,9 @@
 
 3. 输入或选择系统生成订阅任务的ID。每个订阅任务具有全局唯一标识ID，是获取订阅数据时必须提供的参数之一。订阅ID的格式支持英文大小写、下划线、中横线。
 
-4. 选择 **SA账号**。每个订阅任务都必须关联一个[SA账号](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。系统会动态检测SA账号的有效性并及时更新订阅配置。当订阅关联的SA账号被删除，则该订阅失效。
+4. 选择**SA账号**。每个订阅任务都必须关联一个 [SA账号](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。系统会动态检测SA账号的有效性并及时更新订阅配置。当订阅关联的SA账号被删除，则该订阅失效。
 
-   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考[管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
+   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考 [管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
 
 5. 输入 **订阅描述**。
 
@@ -34,6 +34,7 @@
 
    - 模型过滤条件：选择订阅的模型告警数据
    - 设备标签过滤条件：添加设备标签，订阅指定设备的告警数据
+   - 资产树标签过滤条件：添加资产树标签，订阅指定资产树的告警数据
 
 .. note:: 当订阅配置的模型或测点被删除，订阅配置页面依旧能看到订阅配置信息，但是会提示相关配置项为未知对象。
 

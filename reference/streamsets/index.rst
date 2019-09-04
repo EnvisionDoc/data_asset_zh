@@ -9,7 +9,6 @@ EnOS™流数据分析服务开放多个底层封装好的StreamSets算子，支
 
 资产主数据算子
 -----------------------------------
-
 .. toctree::
    :maxdepth: 1
 
@@ -22,7 +21,6 @@ EnOS™流数据分析服务开放多个底层封装好的StreamSets算子，支
 
 数据处理算子
 -----------------------------------
-
 .. toctree::
    :maxdepth: 1
 
@@ -39,7 +37,6 @@ EnOS™流数据分析服务开放多个底层封装好的StreamSets算子，支
    state_restorer
 
 其他数据处理算子
------------------------------------
 
 .. toctree::
    :maxdepth: 1
@@ -49,7 +46,6 @@ EnOS™流数据分析服务开放多个底层封装好的StreamSets算子，支
 
 数据质量算子
 -----------------------------------
-
 .. toctree::
    :maxdepth: 1
 
@@ -58,9 +54,9 @@ EnOS™流数据分析服务开放多个底层封装好的StreamSets算子，支
 
 电量计算算子
 -----------------------------------
-
 .. toctree::
    :maxdepth: 1
 
    last_record_appender
    delta_calculator
+   delta_down_sampler

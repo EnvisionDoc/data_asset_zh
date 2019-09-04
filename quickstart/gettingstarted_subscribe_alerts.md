@@ -22,8 +22,8 @@
 |:---------|:---------|:---------|:---------|:---------|
 | 测点     | test_raw | test_raw | AI       | DOUBLE   |
 
-- **数据接入**：*test_raw*为告警数据采集点，请参考[设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成 *test_raw* 点数据的采集。
-- **告警配置**：请参考[资产告警](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/howto/alert/alert_overview.html)来完成 *test_raw* 点数据的告警配置。
+- **数据接入**：*test_raw*为告警数据采集点，请参考 [设备连接](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
+- **告警配置**：请参考 [资产告警](https://www.envisioniot.com/docs/device-connection/zh_CN/latest/howto/alert/alert_overview.html) 来完成 *test_raw* 点数据的告警配置。
 
 
 ## 操作步骤
@@ -42,13 +42,15 @@
 
 1. 创建订阅：点击**添加订阅**按钮，可添加订阅Topic，本教程中选择**告警数据订阅**。
 
-2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考[管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)。
+2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法请参考 [管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)。
 
-   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考[管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
+   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考 [管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
 
 3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 
 4. 选择模型过滤条件：本教程中选择 *test_Model* 这个模型作为条件，订阅系统则会过滤出符合模型条件的数据。
+
+5. （可选）可根据业务需要，添加设备标签或资产树标签，过滤订阅的数据，仅订阅指定设备或指定资产树相关的告警数据。
 
 
 
@@ -104,7 +106,7 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 
 .. note:: 在以上示例中， `sub_server_host` 和 `sub_server_port` 指订阅服务的地址和端口号。由于不同的云服务和实例的服务地址和端口号不同，请联系远景智能项目经理或技术支持获取对应的服务和端口信息。
 
-有关数据订阅SDK的详细信息，请参考[数据订阅SDK参考](../reference/data_subscription_sdk)。
+有关数据订阅SDK的详细信息，请参考 [数据订阅SDK参考](../reference/data_subscription_sdk)。
 
 ## 第四步：查看数据消费结果
 
