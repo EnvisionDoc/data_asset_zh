@@ -123,10 +123,10 @@ html_theme_options = {
 
 }
 
-# Add any paths that contain custom static files (such as style sheets),
-# relative to this directory. They are copied after the built-in static files,
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['./static']
+html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -296,7 +296,7 @@ latex_show_urls = 'footnote'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, u'enosdocumentationcenter', u'EnOS Fundamental',
+    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset',
      [author], 1)
 ]
 
@@ -307,7 +307,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'EnOSDocumentationCenter', 'EnOS Fundamental',
+    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset',
      author, 'EnOSDocumentationCenter', 'One line description of project.',
      'Miscellaneous'),
 ]
@@ -332,7 +332,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset',
-     author, 'EnOSDocumentationCenter', 'Product documentation about EnOS Data Asset.',
+     author, 'EnOSDocumentationCenter', 'Product documentation about EnOS Fundamental.',
      'Miscellaneous'),
 ]
 

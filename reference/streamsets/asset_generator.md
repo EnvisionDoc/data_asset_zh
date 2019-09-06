@@ -50,8 +50,10 @@
 
 **配置示例图**
 
-.. image:: media/asset_generator_config.jpg
+.. image:: media/asset_generator_config.png
 
 **结果输出示例**
 
-.. image:: media/asset_generator_result.jpg
+.. image:: media/asset_generator_result.png
+
+<!--end-->

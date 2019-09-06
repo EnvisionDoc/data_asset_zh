@@ -31,6 +31,6 @@
 
 ### 输出示例
 
-.. image:: media/time_sort_result.jpg
+.. image:: media/time_sort_result.png
 
 <!--end-->

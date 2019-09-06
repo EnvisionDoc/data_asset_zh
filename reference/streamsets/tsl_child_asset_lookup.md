@@ -58,6 +58,6 @@
 
 ### 输出示例
 
-.. image:: media/tsl_child_asset_lookup_result.jpg
+.. image:: media/tsl_child_asset_lookup_result.png
 
 <!--end-->

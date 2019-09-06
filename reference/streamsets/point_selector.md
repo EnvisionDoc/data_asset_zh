@@ -41,6 +41,6 @@
 
 ### 输出示例
 
-.. image:: media/point_selector_result.jpg
+.. image:: media/point_selector_result.png
 
 <!--end-->

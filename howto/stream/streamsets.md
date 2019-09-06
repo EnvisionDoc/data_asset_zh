@@ -23,7 +23,7 @@ StreamSets提供拖拽式的可视化流数据任务设计界面，开发者不�
 
 EnOS提供设计StreamSets流数据分析任务的模板，通过导入配置模板，可以快速设计一条StreamSets流数据分析任务（Pipeline）：
 
-1. 点击 [下载StreamSets流数据分析任务配置模板](../../_static/StreamsetsPipelineDemo.json)，将模板配置文件 `StreamsetsPipelineDemo.json` 下载保存到本地。
+1. 点击 [下载StreamSets流数据分析任务配置模板](../../static/StreamsetsPipelineDemo.json)，将模板配置文件 `StreamsetsPipelineDemo.json` 下载保存到本地。
 
 2. 登录EnOS控制台，选择 **流数据处理 > StreamSets**，点击 **Create New Pipeline** 旁的下三角，选择 **Import Pipeline**。
 

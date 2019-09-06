@@ -36,6 +36,6 @@
 
 ### 输出示例
 
-.. image:: media/point_partitioner_result.jpg
+.. image:: media/point_partitioner_result.png
 
 <!--end-->

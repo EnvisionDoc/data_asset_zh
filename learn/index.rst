@@ -1,13 +1,7 @@
 ﻿流数据处理
 =========================
 
-.. contents::
-   :depth: 1
-   :hidden:
-
 EnOS™流数据分析服务能充分满足处理设备和资产的实时数据，以及处理经离线消息通道集成的数据的需求。
-
-
 
 基于Apache Spark™ Streaming，经过Envision定制和优化，EnOS™流数据分析服务具有高可扩展性、高吞吐量、和高容错性等优点。EnOS还致力于沉淀IoT领域的流处理常用算法，开发者只需通过简单的模板配置即可完成流数据处理任务的开发及运维。此外，EnOS流数据分析服务还提供一整套底层封装好的StreamSets算子，供开发者开发定制化的流数据分析任务，满足复杂的业务需求。
 
@@ -64,7 +58,7 @@ EnOS流数据分析提供以下模板，供开发者快速配置流数据处理�
 
    ai_template_overview
    multi_point_overview
-   pi_template_overview  
+   pi_template_overview
 
 StreamSets算子
 -----------------------------------

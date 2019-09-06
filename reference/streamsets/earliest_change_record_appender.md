@@ -49,6 +49,6 @@
 
 ### 输出示例
 
-.. image:: media/earliest_change_record_appender_result.jpg
+.. image:: media/earliest_change_record_appender_result.png
 
 <!--end-->
