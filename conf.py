@@ -284,7 +284,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, u'EnOSDocumentationCenter.tex', u'API',
+    (master_doc, u'EnOSDocumentationCenter.tex', u'Data Asset',
      u'远景智能', 'book', 'true'),
 ]
 
