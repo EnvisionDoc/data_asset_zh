@@ -59,7 +59,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'EnOS Edge API'
+project = u'EnOS Data Asset'
 copyright = u'2018, EnOS'
 author = u'Envision Digital'
 
@@ -196,7 +196,7 @@ latex_elements = {
         %\fancyhead[RO]{\small \nouppercase{\rightmark}}
         %\fancyhead[LE]{\small \nouppercase{\leftmark}}
 
-        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny EnOS Edge API} }{\href{https://www.envisioniot.com}{\tiny Envision digital}}}
+        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny EnOS Data Asset} }{\href{https://www.envisioniot.com}{\tiny Envision digital}}}
 
         %%% page number
         \fancyfoot[CO, CE]{\thepage}
@@ -249,7 +249,7 @@ latex_elements = {
 
             \vspace{5mm}
 
-            \fontsize{30pt}{\baselineskip}\selectfont \textbf{Edge API}
+            \fontsize{30pt}{\baselineskip}\selectfont \textbf{数据资产}
 
             \vspace{5mm}
 
@@ -296,7 +296,7 @@ latex_show_urls = 'footnote'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, u'enosdocumentationcenter', u'EnOS Edge API',
+    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset',
      [author], 1)
 ]
 
@@ -307,7 +307,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'EnOSDocumentationCenter', 'EnOS Edge API',
+    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset',
      author, 'EnOSDocumentationCenter', 'One line description of project.',
      'Miscellaneous'),
 ]
@@ -320,7 +320,7 @@ texinfo_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, u'enosdocumentationcenter', u'EnOS Edge API',
+    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset',
      [author], 1)
 ]
 
@@ -331,8 +331,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'EnOSDocumentationCenter', 'EnOS Edge API',
-     author, 'EnOSDocumentationCenter', 'Product documentation about EnOS Edge API.',
+    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset',
+     author, 'EnOSDocumentationCenter', 'Product documentation about EnOS Data Asset.',
      'Miscellaneous'),
 ]
 
