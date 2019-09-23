@@ -28,6 +28,8 @@
 
 ## 消费实时数据代码示例
 
+以下示例为使用指定的Consumer Group消费订阅的资产实时数据。如果订阅的数据量较大，可使用同一Consumer Group的2个Consumer Client同时消费订阅数据，提高消费数据的效率。
+
 ```
 import com.envisioniot.sub.client.EosClient;
 import com.envisioniot.sub.client.data.IDataHandler;
@@ -36,19 +38,19 @@ import com.envisioniot.sub.common.model.dto.StreamMessage;
 
 public class DataServiceDemo {
     public static void main(String[] args) throws Exception {
-        // 订阅服务地址，请根据使用环境填写
+        // 订阅服务地址，根据EnOS环境填写
         String host = "subscription_server";
-        // 订阅服务端口，请根据使用环境填写
+        // 订阅服务端口，根据EnOS环境填写
         int port = 9001;
         // 应用身份验证，在应用创建时生成
         String accessKey = "access_key";
         // 应用身份验证，在应用创建时生成
         String secretKey = "secret_key";
 
-        // 订阅ID，创建订阅时生成
+        // 订阅ID，创建订阅任务时指定或生成
         String subId = "subscription_id";
 
-        // 订阅分组，相关概念见订阅SDK参考（可选）
+        // 订阅分组，相关概念见订阅SDK参考
         String consumerGroup = "consumer_group";
 
         EosClient eosClient = new EosClient(host, port, accessKey, secretKey);
@@ -63,10 +65,7 @@ public class DataServiceDemo {
             }
         };
 
-        // 需要调用subscribe函数创建订阅连接，调用后订阅连接被创建
-        dataService.subscribe(dataHandler, subId);
-
-        // 和上面的subscribe任选其一使用来创建连接
+        // 调用subscribe函数创建订阅连接，调用后订阅连接被创建
         // 同时指定订阅分组，关于订阅分组的概念见订阅SDK参考说明
         dataService.subscribe(dataHandler, subId, consumerGroup);
     }
@@ -74,12 +73,14 @@ public class DataServiceDemo {
 ```
 
 .. note:: - 在以上示例中， `host` 和 `port` 指订阅服务的地址和端口号。由于不同的云服务和实例的服务地址和端口号不同，请联系远景智能项目经理或技术支持获取对应的服务和端口信息。
-      - 每个Topic Partition数量为2，即同一个订阅Topic最多只支持2个Consumer同时消费数据。
+      - 每个Topic Partition数量为2，即同一个订阅Topic最多只支持2个Consumer Client同时消费数据。
       - 一个Consumer实例只能消费一个Topic。
       - 数据在Topic中的存储时长默认为3天。
 
 
 ## 消费告警数据代码示例
+
+以下示例为不指定Consumer Group消费订阅的资产告警数据。
 
 ```
 import com.envisioniot.sub.client.EosClient;
@@ -89,20 +90,17 @@ import com.envisioniot.sub.common.model.Alert;
 
 public class AlertServiceDemo1 {
     public static void main(String[] args) throws Exception {
-        // 订阅服务地址，请根据使用环境填写
+        // 订阅服务地址，根据EnOS环境填写
         String host = "subscription_server";
-        // 订阅服务端口，请根据使用环境填写
+        // 订阅服务端口，根据EnOS环境填写
         int port = 9001;
         // 应用身份验证，在应用创建时生成
         String accessKey = "access_key";
         // 应用身份验证，在应用创建时生成
         String secretKey = "secret_key";
 
-        // 订阅ID，创建订阅时生成
+        // 订阅ID，创建订阅任务时指定或生成
         String subId = "subscription_id";
-
-        // 订阅分组，相关概念见订阅SDK参考（可选）
-        String consumerGroup = "consumer_group";
 
         EosClient eosClient = new EosClient(host, port, accessKey, secretKey);
 
@@ -120,12 +118,8 @@ public class AlertServiceDemo1 {
         // 需要调用subscribe函数创建订阅连接，调用后订阅连接被创建
         alertService.subscribe(alertHandler, subId);
 
-        // 和上面的subscribe任选其一使用来创建连接
-        // 同时指定订阅分组，关于订阅分组的概念见订阅SDK参考说明
-        alertService.subscribe(alertHandler, subId, consumerGroup);
     }
 }
 ```
-
 
 <!--end-->
