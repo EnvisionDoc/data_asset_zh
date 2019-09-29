@@ -120,7 +120,7 @@ html_theme = 'sphinx_enos_theme'
 #
 html_theme_options = {
     'copyright_zh': '© 2019 Envision Digital. All Rights Reserved.',
-    'display_header': False,
+    'docs_url_zh': '/zh_CN/documentation/',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -132,7 +132,7 @@ html_static_path = ['./static']
 # to template names.
 #
 # This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+# refs: http://alabaster.readthedocs.io/en/2.0.9/installation.html#sidebars
 html_sidebars = {
     '**': [
         'relations.html',  # needs 'show_related': True theme option to display
@@ -163,6 +163,8 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     #
     'pointsize': '10pt',
+    'fncychap': '\\usepackage{fncychap}',
+    'fontpkg': '\\usepackage{amsmath,amsfonts,amssymb,amsthm}',
 
     # Additional stuff for the LaTeX preamble.
     #
@@ -196,7 +198,7 @@ latex_elements = {
         %\fancyhead[RO]{\small \nouppercase{\rightmark}}
         %\fancyhead[LE]{\small \nouppercase{\leftmark}}
 
-        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny EnOS Data Asset} }{\href{https://www.envisioniot.com}{\tiny Envision digital}}}
+        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny EnOS 数据资产管理} }{\href{https://www.envisioniot.com}{\tiny Envision digital}}}
 
         %%% page number
         \fancyfoot[CO, CE]{\thepage}
@@ -249,7 +251,7 @@ latex_elements = {
 
             \vspace{5mm}
 
-            \fontsize{30pt}{\baselineskip}\selectfont \textbf{数据资产}
+            \fontsize{30pt}{\baselineskip}\selectfont \textbf{数据资产管理}
 
             \vspace{5mm}
 
@@ -284,7 +286,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, u'EnOSDocumentationCenter.tex', u'Data Asset',
+    (master_doc, u'EnOSDocumentationCenter.tex', u'数据资产管理',
      u'远景智能', 'book', 'true'),
 ]
 

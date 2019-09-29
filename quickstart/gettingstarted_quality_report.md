@@ -1,4 +1,4 @@
-# 查询数据质量报告
+# 入门指引：生成数据质量报告
 
 该教程能帮助你快速学习使用流式计算StreamSets算子对数据进行质量打标，并且查询数据质量报告。
 
@@ -31,7 +31,7 @@
      - 必须保证需要处理的输入点和输出点的测点类型都是AI类型。
 
 
-- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
+- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/2.0.9/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
 
 
 ## 操作步骤

@@ -1,4 +1,4 @@
-# 数据存储配置和读取
+# 入门指引：数据存储配置和读取
 
 该教程能帮助你学习如何快速配置TSDB存储策略及读取存储的数据。
 
@@ -15,7 +15,7 @@
 
 **数据准备**
 
-- 模型配置：配置教程请参考 [创建模型](/docs/device-connection/zh_CN/latest/howto/model/creating_model.html)。
+- 模型配置：配置教程请参考 [创建模型](/docs/device-connection/zh_CN/2.0.9/howto/model/creating_model.html)。
 
 本教程使用的模型 *test_Model* 的配置如下：
 

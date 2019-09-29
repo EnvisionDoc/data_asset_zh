@@ -1,32 +1,32 @@
-﻿开发流数据处理任务
-=======================
+﻿流数据处理
+=========================
 
-流数据处理任务的开发流程如下：
+.. contents::
+   :depth: 1
+   :hidden:
 
-1. 创建流数据处理任务
-2. 配置流数据处理策略
-3. 保存及发布流数据处理任务
-4. 运行及维护流数据处理任务
-5. 使用StreamSets算子进行开发
+EnOS™流数据分析服务能充分满足处理设备和资产的实时数据，以及处理经离线消息通道集成的数据的需求。
+
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 概述
+
+   ../../learn/streaming_overview
 
 
 .. toctree::
    :maxdepth: 1
    :caption: 操作
 
-   creating_job
-   configuring_ai_template
-   configuring_multi_point_template
-   configuring_pi_template
-   publishing_job
-   monitoring_job
+   dev
    streamsets
+   ops
 
 
 .. toctree::
    :maxdepth: 1
    :caption: 参考
 
-   ../../reference/time_window
-   ../../reference/statement_syntax
-   ../../reference/power_calculation_logic
+   reference

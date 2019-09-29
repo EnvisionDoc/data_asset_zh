@@ -1,6 +1,6 @@
 # Unit 3: Configuring Data Subscription Jobs
 
-To subscribe to the real-time measuring point data and alert records of the electric meter, you need to configure data subscription jobs on the EnOS Console first. For more information about the features of the Data Subscription service, see [Data Subscription](/docs/data-asset/en/latest/learn/data_subscription_overview.html).
+To subscribe to the real-time measuring point data and alert records of the electric meter, you need to configure data subscription jobs on the EnOS Console first. For more information about the features of the Data Subscription service, see [Data Subscription](../../learn/data_subscription_overview).
 
 Follow the instructions below to configure data subscription jobs for the device real-time data and alert records separately.
 
@@ -36,7 +36,7 @@ See the following example of the created data subscription job.
 
 .. image:: media/subscription_config_1.png
 
-For detailed information about configuring subscription jobs for real-time data, see [Subscribing to Real-time Data](/docs/data-asset/en/latest/quickstart/gettingstarted_subscribe_realtime.html).
+For detailed information about configuring subscription jobs for real-time data, see [Subscribing to Real-time Data](../../quickstart/gettingstarted_subscribe_realtime).
 
 ## Subscribing to Alert Records
 
@@ -70,7 +70,7 @@ See the following example of the created alert subscription job.
 
 .. image:: media/subscription_config_2.png
 
-For detailed information about configuring subscription jobs for alert records, see [Subscribing to Alert Data](/docs/data-asset/en/latest/quickstart/gettingstarted_subscribe_alerts.html).
+For detailed information about configuring subscription jobs for alert records, see [Subscribing to Alert Data](../../quickstart/gettingstarted_subscribe_alerts).
 
 ## Authorizing the application service account
 
@@ -92,7 +92,7 @@ The application service account (SA) associated with the data subscription jobs 
 
    .. image:: media/authorizing_sa.png
 
-After authorizing the application service account with asset access permission, you can enable the data subscription jobs. For detailed information about authorizing the service account, see [Managing Service Accounts](/docs/iam/en/latest/howto/service_account/managing_service_account.html).
+After authorizing the application service account with asset access permission, you can enable the data subscription jobs. For detailed information about authorizing the service account, see [Managing Service Accounts](/docs/iam/zh_CN/2.0.9/howto/service_account/managing_service_account.html).
 
 ## Enabling the subscription jobs
 

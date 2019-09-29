@@ -45,5 +45,4 @@ See the following example:
 .. image:: media/measure_points.png
 
 ## Next Unit
-
 [Configuring Storage Policy for the Device Data](configuring_storage_policy)

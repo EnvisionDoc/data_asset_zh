@@ -1,4 +1,4 @@
-# 多路数据归并处理
+# 入门指引：多路数据归并处理
 
 本教程能帮助你快速学习如何使用**多路归并模板**进行单设备多测点间的数据运算处理。
 ## 前提条件
@@ -23,8 +23,8 @@
 | 测点     | testA_raw | testA_raw | AI       | DOUBLE   |
 | 测点     | testB_raw | testB_raw | AI       | DOUBLE   |
 | 测点     | testC     | testC     | AI       | DOUBLE   |
-- 存储配置：对*testA_raw*、*testB_raw*、*testC* 点进行存储配置。这三个测点都可以配置为AI原始数据和AI分钟级归一化数据。具体配置方法，请参考 [配置TSDB存储](/docs/data-asset/zh_CN/latest/configuring_tsdb_storage.html)。
-- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *testA_raw* 和 *testB_raw* 测点的数据的采集。
+- 存储配置：对*testA_raw*、*testB_raw*、*testC* 点进行存储配置。这三个测点都可以配置为AI原始数据和AI分钟级归一化数据。具体配置方法，请参考 [配置TSDB存储](../configuring_tsdb_storage)。
+- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/2.0.9/quickstart/gettingstarted_device_connection.html) 来完成 *testA_raw* 和 *testB_raw* 测点的数据的采集。
 
 ## 操作步骤
 

@@ -41,7 +41,7 @@
        + subId: 云端配置的subId
      - null
    * - subscribe(IDataHandler dataHandler,String subId,String consumerGroup)
-     - 获取subId的订阅的实时数据，同时指定订阅分组说明：consumerGroup指定了当前订阅client所属的订阅组，属于同一个订阅组的client共同处理订阅内容，这在单个订阅client处理能力有限的情况下，可以通过增加属于同一个订阅组的client来提升整体订阅处理能力。注意：同一条消息只能被一个订阅组内的某一个client消费。
+     - 获取subId订阅的实时数据，同时指定订阅分组。说明：consumerGroup指定了当前订阅client所属的订阅组，属于同一个订阅组的client可共同处理订阅内容；这在单个订阅client处理能力有限的情况下，可以通过增加属于同一个订阅组的client来提升整体订阅处理能力。注意：同一条消息只能被一个订阅组内的某一个client消费。
      - + dataHandler: 实时订阅数据处理对象
        + subId：云端配置的subId
        + consumerGroup：订阅分组名称 （如果consumerGroup传null，系统默认使用“DefaultConsumerGroup”作为consumerGroup的值。自行定义时，需避免使用“DefaultConsumerGroup”作为consumerGroup的值）
@@ -103,7 +103,7 @@
        + subId: 云端配置的subId
      - null
    * - subscribe(IAlertHandler alertHandler,String subId,String consumerGroup)
-     - 获取subId的订阅的告警数据，同时指定订阅分组说明：consumerGroup指定了当前订阅client所属的订阅组，属于同一个订阅组的client共同处理订阅内容，这在单个订阅client处理能力有限的情况下，可以通过增加属于同一个订阅组的client来提升整体订阅处理能力。注意：同一条消息只能被一个订阅组内的某一个client消费。
+     - 获取subId订阅的告警数据，同时指定订阅分组。说明：consumerGroup指定了当前订阅client所属的订阅组，属于同一个订阅组的client可共同处理订阅内容；这在单个订阅client处理能力有限的情况下，可以通过增加属于同一个订阅组的client来提升整体订阅处理能力。注意：同一条消息只能被一个订阅组内的某一个client消费。
      - + alertHandler：告警订阅数据处理对象
        + subId：云端配置的subId
        + consumerGroup：订阅分组名称，与kafka consumerGroup含义相同（如果consumerGroup传null，系统默认使用“DefaultConsumerGroup”作为consumerGroup的值。自行定义时，需避免使用“DefaultConsumerGroup”作为consumerGroup的值）

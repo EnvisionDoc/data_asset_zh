@@ -6,16 +6,32 @@
 
 存储在每个TSDB存储类型中的数据，都可以通过调用相应的数据服务API来查询。数据服务API的功能和调用方法如下：
 
-| API 名称                           | 功能                                                         | 调用方法                                                     |
-| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `getAssetsAIRawData`               | 获取指定设备的某些测点在某段时间内的AI原始数据               | 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来获取存储类型为*AI原始数据*的数据。 |
-| `getAssetsAINormalizedData`        | 获取指定设备的某些测点在某段时间内的分钟级归一化AI数据       | 通过传入设备模型ID、资产ID、带数据聚合算法的测点ID、算法作用时间间隔、查询起止时间段来获取存储类型为*AI分钟级归一化数据*的数据。注：当不使用数据聚合算法时， 算法作用时间间隔参数`interval`的值必须为0。 |
-| `getAssetsStatusData`              | 获取指定设备在某段时间内的状态（DI）数据                     | 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来变位查询设备状态数据。 |
-| `getAssetsCurrentDayElectricPower` | 获取指定设备当日已累计电量数据                               | 通过传入设备模型ID、资产ID、测点ID、查询设备从当日0点开始已累计的电量数据。 |
-| `getAssetsElectricPowerData`       | 获取指定设备在某段时间内的电量（PI）数据                     | 通过传入设备模型ID、资产ID、带数据聚合算法的测点ID、算法作用时间间隔、查询起止时间段来获取存储类型为*PI数据*的数据。注：当不使用数据聚合算法时， 算法作用时间间隔参数`interval`的值必须为0。 |
-| `getAssetsGenericData`             | 获取指定设备的某些测点在某段时间内通用类型的数据             | 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来获取存储类型为*通用数据*的数据。 |
-| `getAssetsRawDataByTimeRange`      | 获取指定设备的某些测点在某段时间内原始数据的值（包括AI、DI、和通用数据类型） | 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来获取各种类型的设备原始数据。 |
+.. list-table::
 
+   * - API 名称
+     - 功能
+     - 调用方法
+   * - ``getAssetsAIRawData``
+     - 获取指定设备的某些测点在某段时间内的AI原始数据
+     - 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来获取存储类型为*AI原始数据*的数据。
+   * - ``getAssetsAINormalizedData``
+     - 获取指定设备的某些测点在某段时间内的分钟级归一化AI数据
+     - 通过传入设备模型ID、资产ID、带数据聚合算法的测点ID、算法作用时间间隔、查询起止时间段来获取存储类型为*AI分钟级归一化数据*的数据。注：当不使用数据聚合算法时， 算法作用时间间隔参数`interval`的值必须为0。
+   * - ``getAssetsStatusData``
+     - 获取指定设备在某段时间内的状态（DI）数据
+     - 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来变位查询设备状态数据。
+   * - ``getAssetsCurrentDayElectricPower``
+     - 获取指定设备当日已累计电量数据
+     - 通过传入设备模型ID、资产ID、测点ID、查询设备从当日0点开始已累计的电量数据。
+   * - ``getAssetsElectricPowerData``
+     - 获取指定设备在某段时间内的电量（PI）数据
+     - 通过传入设备模型ID、资产ID、带数据聚合算法的测点ID、算法作用时间间隔、查询起止时间段来获取存储类型为*PI数据*的数据。注：当不使用数据聚合算法时， 算法作用时间间隔参数``interval``的值必须为0。
+   * - ``getAssetsGenericData``
+     - 获取指定设备的某些测点在某段时间内通用类型的数据
+     - 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来获取存储类型为*通用数据*的数据。
+   * - ``getAssetsRawDataByTimeRange``
+     - 获取指定设备的某些测点在某段时间内原始数据的值（包括AI、DI、和通用数据类型）
+     - 通过传入设备模型ID、资产ID、测点ID、查询起止时间段来获取各种类型的设备原始数据。
 
 
 ## EnOS API SDK for Java
@@ -36,7 +52,7 @@ EnOS提供的API SDK 支持API请求的封装，签名加密，响应解释，�
    </dependency>
    ```
 
-或者，你也可以从[GitHub](https://github.com/EnvisionIot/enos-api-sdk-java)下载EnOS API SDK的源代码，并将其安装到开发环境中。有关EnOS SDK的详细介绍，请参考[EnOS SDK 快速入门](/docs/app-development/zh_CN/latest/gettingstarted_sdk.html)。
+或者，你也可以从[GitHub](https://github.com/EnvisionIot/enos-api-sdk-java)下载EnOS API SDK的源代码，并将其安装到开发环境中。有关EnOS SDK的详细介绍，请参考[EnOS SDK 快速入门](/docs/app-development/zh_CN/2.0.9/gettingstarted_sdk.html)。
 
 ## 代码示例
 
@@ -109,6 +125,6 @@ EnOS系统提供详细的API参考文档，包括API的调用方法、API路径�
 
 .. image:: ../../media/api_doc.png
 
-有关调用EnOS API的详细方法，请参考[EnOS REST API 快速入门](/docs/app-development/zh_CN/latest/gettingstarted_api.html)。
+有关调用EnOS API的详细方法，请参考[EnOS REST API 快速入门](/docs/app-development/zh_CN/2.0.9/gettingstarted_api.html)。
 
 <!--end-->

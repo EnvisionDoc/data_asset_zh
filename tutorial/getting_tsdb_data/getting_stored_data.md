@@ -6,7 +6,7 @@ When storage policies are configured for the data of the smart electric meter, a
 
 In this tutorial, get the Maven dependency information of the API Core SDK for Java from the Maven repository and add it to your development project. Detailed steps are as follows:
 
-1. Open the Maven repository of the SDK at https://mvnrepository.com/artifact/com.envisioniot/apim-poseidon/0.1.7.
+1. Open the Maven repository of the SDK at https://mvnrepository.com/artifact/com.envisioniot/apim-poseidon.
 
 2. Open the development environment and include the maven dependency for the SDK in your Java project. See the following example.
 
@@ -14,7 +14,7 @@ In this tutorial, get the Maven dependency information of the API Core SDK for J
    <dependency>
        <groupId>com.envisioniot</groupId>
        <artifactId>apim-poseidon</artifactId>
-       <version>0.1.7</version>
+       <version>0.1.8</version>
    </dependency>
    ```
 
@@ -54,31 +54,31 @@ Take the following steps to compile the code for the *Get Asset AI Raw Data* API
 
    ```java
    private static class Request extends PoseidonRequest{
-   
+
        public void setQueryParam(String key, Object value){
            queryEncodeParams().put(key, value);
        }
-   
+
        public void setMethod(String method) {
            this.method = method;
        }
-   
+
        private String method;
-   
+
        public String baseUri() {
            return "";
        }
-   
+
        public String method() {
            return method;
        }
    }
-   
+
    public void getAssetsAIRawDataTest(){
-   
+
        String appKey = "accessKey";
        String appSecret = "secretKey";
-   
+
        Request request = new Request();
        request.setQueryParam("orgId", "o1552032369xxxx");
        request.setQueryParam("modelId", "ElectricMeter");
@@ -88,9 +88,9 @@ Take the following steps to compile the code for the *Get Asset AI Raw Data* API
        request.setQueryParam("endTime", "2019-03-26T09:12:00-08:00");
        request.setQueryParam("pageSize", 100);
        request.setQueryParam("accessKey", appKey);
-   
+
        request.setMethod("GET");
-   
+
        try {
            JSONObject response =  Poseidon.config(PConfig.init().appKey(appKey).appSecret(appSecret).debug())
                    .url("http://apim-gateway/tsdb-service/v2.0/ai")
@@ -131,44 +131,44 @@ The data of the *Reading* measuring point processed by the streaming engine is a
 
    ```java
    private static class Request extends PoseidonRequest{
-   
+
        public void setQueryParam(String key, Object value){
            queryEncodeParams().put(key, value);
        }
-   
+
        public void setMethod(String method) {
            this.method = method;
        }
-   
+
        private String method;
-   
+
        public String baseUri() {
            return "";
        }
-   
+
        public String method() {
            return method;
        }
    }
-   
+
    public void getAssetsAINormalizedDataTest(){
-   
+
        String appKey = "accessKey";
        String appSecret = "secretKey";
-   
+
        Request request = new Request();
        request.setQueryParam("orgId", "o1552032369xxxx");
        request.setQueryParam("modelId", "ElectricMeter");
        request.setQueryParam("assetIds","asset_id");
-       request.setQueryParam("MaxReading10Min, MinReading10Min, ReadingDifference"); 
+       request.setQueryParam("MaxReading10Min, MinReading10Min, ReadingDifference");
        request.setQueryParam("interval", 0);
        request.setQueryParam("startTime", "2019-03-21T09:00:00-08:00");
        request.setQueryParam("endTime", "2019-03-26T09:12:00-08:00");
        request.setQueryParam("pageSize" , 100);
        request.setQueryParam("accessKey", appKey);
-   
+
        request.setMethod("GET");
-   
+
        try {
            JSONObject response =  Poseidon.config(PConfig.init().appKey(appKey).appSecret(appSecret).debug())
                    .url("http://apim-gateway/tsdb-service/v2.0/ai-normalized")
@@ -213,6 +213,6 @@ The data of the *Reading* measuring point processed by the streaming engine is a
 
 ## API reference
 
-The reference documentation for each API can be found through **EnOS Console > EnOS API**. Summary of APIs is displayed by API service categories. 
+The reference documentation for each API can be found through **EnOS Console > EnOS API**. Summary of APIs is displayed by API service categories.
 
 <!--end-->

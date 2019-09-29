@@ -25,7 +25,7 @@ Create a smart electric meter device with the following basic settings:
 
 ## Perform device-end development and initialize connection
 
-The [Connecting a Simulated Device into EnOS](/docs/device-connection/en/latest/tutorial/connecting_device_simulated/index.html) tutorial describes detailed steps for how to perform device-end development. You can follow the same steps to connect the smart electric meter into EnOS for this tutorial.
+The [Connecting a Simulated Device into EnOS](/docs/device-connection/en/2.0.9/tutorial/connecting_device_simulated/index.html) tutorial describes detailed steps for how to perform device-end development. You can follow the same steps to connect the smart electric meter into EnOS for this tutorial.
 
 ## Next Unit
 

@@ -14,7 +14,7 @@ In this tutorial, get the Maven dependency information of the EnOS SDK for data 
    <dependency>
      <groupId>com.envisioniot</groupId>
      <artifactId>enos-subscribe</artifactId>
-     <version>2.2.0</version>
+     <version>2.3.0</version>
    </dependency>
    <dependency>
      <groupId>com.google.code.gson</groupId>
@@ -139,6 +139,6 @@ BaseEvent{eventId='201904091731a3b0ff3a10003592ed7e6b31d34e', orgId='o1552032369
 BaseEvent{eventId='2019040914bcf8e56eae1eaf3503cf9ca1e1d7dc', orgId='o15520323695671', deviceId='KuBqAoBz', modelId='Grid.TopupAcMeter', pointId='Temperature', hitRuleId=55, value='0.99026257', time=1554781969548, localTime=1554810769548, severityId=38, severityDesc={"en_US":"High level severity alert","zh_CN":"Warning"}, typeId=30, typeDesc={"en_US":"Device data exceeds limit.","zh_CN":"Device data exceeds limit."}, subTypeId=null, subTypeDesc=null, contentId=39, contentDesc={"en_US":"The device temperature exceeds limit.","zh_CN":"The device temperature exceeds limit."}, eventType=1, ruleTag={}, ruleDesc=null}
 ```
 
-For detailed information about EnOS SDK for data subscription, see [Data Subscription SDK Reference](/docs/data-asset/en/latest/reference/data_subscription_sdk.html).
+For detailed information about EnOS SDK for data subscription, see [Data Subscription SDK Reference](../../reference/data_subscription_sdk).
 
 <!--end-->

@@ -18,11 +18,11 @@
 
 **强大的表达式编写语法**
 
-编写输出逻辑表达式时，支持自动提示组织内的所有模型、模型测点、和模型属性。详见[多路数据归并处理表达式语法](/docs/data-asset/zh_CN/latest/reference/statement_syntax.html)。
+编写输出逻辑表达式时，支持自动提示组织内的所有模型、模型测点、和模型属性。详见[多路数据归并处理表达式语法](/docs/data-asset/zh_CN/2.0.9/reference/statement_syntax.html)。
 
 ## 配置多路数据归并处理任务
 
 可通过以下两大步骤，使用 **多路归并模板** 快速创建流数据处理任务：
 
-1. 创建流数据处理任务时，选择 **多路归并模板**。详见[创建流数据处理任务](/docs/data-asset/zh_CN/latest/howto/stream/creating_job.html)。
-2. 配置多路数据处理策略。详见[配置多路数据归并处理任务](/docs/data-asset/zh_CN/latest/howto/stream/configuring_multi_point_template.html)。
+1. 创建流数据处理任务时，选择 **多路归并模板**。详见[创建流数据处理任务](/docs/data-asset/zh_CN/2.0.9/howto/stream/creating_job.html)。
+2. 配置多路数据处理策略。详见[配置多路数据归并处理任务](/docs/data-asset/zh_CN/2.0.9/howto/stream/configuring_multi_point_template.html)。

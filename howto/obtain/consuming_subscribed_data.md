@@ -1,4 +1,5 @@
 # 消费订阅数据
+
 数据订阅任务启动运行之后，可以使用数据订阅SDK开发应用，消费已订阅的数据。数据订阅SDK的安装和消费订阅数据的代码示例如下：
 
 ## 安装数据订阅SDK
@@ -121,5 +122,19 @@ public class AlertServiceDemo1 {
     }
 }
 ```
+
+## 查看订阅任务的运行情况
+
+当产生的订阅数据的数据量较大时，你可以查看订阅任务的运行情况，确保订阅数据被及时消费。
+
+1. 登录EnOS控制台，在订阅任务列表的 **操作** 一栏中，选择 **更多 > 运行情况**。
+
+2. 在弹窗中查看产生订阅数据的速率和消费订阅数据的速率，判断消费数据是否有延迟。
+
+   .. image:: ../../media/subscription_statistics.png
+
+   .. note:: 在上图示例中，Producer Rates显示实时数据通道产生订阅数据的速率，Consumer Rates显示各个Consumer Group消费订阅数据的速率。offset线和数字代表该订阅任务的数据总量；Consumer Group线和数字代表该Consumer Group消费数据的历史和未被消费的数据量。
+
+如果出现消费数据延迟，可使用同一Consumer Group的2个Consumer Client同时消费订阅数据，提高消费数据的速度。
 
 <!--end-->

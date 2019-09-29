@@ -8,7 +8,7 @@ The scenario is as depicted in the following chart:
 
 .. image:: media/scenario_stream_tsdb_api.png
 
-This tutorial walks you through a typical path of processing and storing the stream data of your devices, that is: 
+This tutorial walks you through a typical path of processing and storing the stream data of your devices, that is:
 
 - Registering and connecting an electric meter to EnOS Cloud.
 - Configuring storage policy for the reading data of the electric meter.
@@ -20,9 +20,9 @@ This tutorial walks you through a typical path of processing and storing the str
 
 ## Prerequisites
 
-You have completed the [Connecting a Simulated Device into EnOS](/docs/device-connection/en/latest/tutorial/connecting_device_simulated/index.html) tutorial to understand how to connect a device to EnOS and upload simulated device data to EnOS Cloud.
+You have completed the [Connecting a Simulated Device into EnOS](/docs/device-connection/en/2.0.9/tutorial/connecting_device_simulated/index.html) tutorial to understand how to connect a device to EnOS and upload simulated device data to EnOS Cloud.
 
-You understand how real-time data flows through the engines, the storage, and the applications. For more information, see [Real-time Data Flow](/docs/data-asset/en/latest/learn/data_flow). 
+You understand how real-time data flows through the engines, the storage, and the applications. For more information, see [Real-time Data Flow](../../learn/data_flow). 
 
 ## Units
 
@@ -47,4 +47,3 @@ This tutorial includes the following units:
 > [Unit 5. Getting Stored Data with EnOS APIs](getting_stored_data)
 >
 > 30 minutes
-
