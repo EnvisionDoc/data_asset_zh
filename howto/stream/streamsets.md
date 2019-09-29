@@ -53,7 +53,7 @@ EnOS提供设计StreamSets流数据分析任务的模板，通过导入配置模
 
    .. image:: ../../media/streamsets_validation.png
 
-更多配置StreamSets Pipeline的详细介绍，参考 [StreamSets User Guide](https://streamsets.com/documentation/controlhub/2.0.9/help/controlhub/UserGuide/PipelineDesign/PipelineDesign.html)。
+更多配置StreamSets Pipeline的详细介绍，参考 [StreamSets User Guide](https://streamsets.com/documentation/controlhub/latest/help/controlhub/UserGuide/PipelineDesign/PipelineDesign.html)。
 
 ## 预览和运行StreamSets流数据分析任务
 

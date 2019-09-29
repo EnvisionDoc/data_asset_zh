@@ -40,4 +40,4 @@
 
 .. image:: ../media/config_stream.png
 
-流数据处理任务发布之后，可在**流运维**页面启动任务。启动任务之前，需确保组织已分配流数据处理资源。如需申请资源，请参考[资源申请及扩容](/docs/enos/zh_CN/2.0.9/resourcemanagement/getstarted.html)。
+流数据处理任务发布之后，可在**流运维**页面启动任务。启动任务之前，需确保组织已分配流数据处理资源。如需申请资源，请参考[资源申请及扩容](/docs/enos/zh_CN/latest/resourcemanagement/getstarted.html)。

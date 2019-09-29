@@ -20,7 +20,7 @@ This tutorial walks you through a typical path of processing and storing the str
 
 ## Prerequisites
 
-You have completed the [Connecting a Simulated Device into EnOS](/docs/device-connection/en/2.0.9/tutorial/connecting_device_simulated/index.html) tutorial to understand how to connect a device to EnOS and upload simulated device data to EnOS Cloud.
+You have completed the [Connecting a Simulated Device into EnOS](/docs/device-connection/en/latest/tutorial/connecting_device_simulated/index.html) tutorial to understand how to connect a device to EnOS and upload simulated device data to EnOS Cloud.
 
 You understand how real-time data flows through the engines, the storage, and the applications. For more information, see [Real-time Data Flow](../../learn/data_flow). 
 

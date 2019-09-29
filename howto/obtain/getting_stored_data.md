@@ -52,7 +52,7 @@ EnOS提供的API SDK 支持API请求的封装，签名加密，响应解释，�
    </dependency>
    ```
 
-或者，你也可以从[GitHub](https://github.com/EnvisionIot/enos-api-sdk-java)下载EnOS API SDK的源代码，并将其安装到开发环境中。有关EnOS SDK的详细介绍，请参考[EnOS SDK 快速入门](/docs/app-development/zh_CN/2.0.9/gettingstarted_sdk.html)。
+或者，你也可以从[GitHub](https://github.com/EnvisionIot/enos-api-sdk-java)下载EnOS API SDK的源代码，并将其安装到开发环境中。有关EnOS SDK的详细介绍，请参考[EnOS SDK 快速入门](/docs/app-development/zh_CN/latest/gettingstarted_sdk.html)。
 
 ## 代码示例
 
@@ -125,6 +125,6 @@ EnOS系统提供详细的API参考文档，包括API的调用方法、API路径�
 
 .. image:: ../../media/api_doc.png
 
-有关调用EnOS API的详细方法，请参考[EnOS REST API 快速入门](/docs/app-development/zh_CN/2.0.9/gettingstarted_api.html)。
+有关调用EnOS API的详细方法，请参考[EnOS REST API 快速入门](/docs/app-development/zh_CN/latest/gettingstarted_api.html)。
 
 <!--end-->

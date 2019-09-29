@@ -21,9 +21,9 @@
 
 3. 输入或选择系统生成订阅任务的ID。每个订阅任务具有全局唯一标识ID，是通过订阅SDK获取订阅数据时必须提供的参数之一。订阅ID的格式支持英文大小写、下划线、中横线。
 
-4. 选择 **SA账号**。每个订阅任务都必须关联一个 [SA账号](/docs/app-development/zh_CN/2.0.9/managing_apps.html)，用以Consumer鉴权及数据鉴权。系统会动态检测SA账号的有效性并及时更新订阅配置。当订阅关联的SA账号被删除，则该订阅失效。
+4. 选择 **SA账号**。每个订阅任务都必须关联一个 [SA账号](/docs/app-development/zh_CN/latest/managing_apps.html)，用以Consumer鉴权及数据鉴权。系统会动态检测SA账号的有效性并及时更新订阅配置。当订阅关联的SA账号被删除，则该订阅失效。
 
-   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考 [管理服务账号](/docs/iam/zh_CN/2.0.9/howto/service_account/managing_service_account.html)。
+   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考 [管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
 
 5. 输入 **订阅描述**。
 

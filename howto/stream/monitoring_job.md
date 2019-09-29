@@ -4,7 +4,7 @@
 
 ## 申请计算资源
 
-启动任务之前，需确保OU已经申请分配计算资源。申请计算资源的步骤，请参考[资源申请及扩容](/docs/enos/zh_CN/2.0.9/resourcemanagement/getstarted.html)。
+启动任务之前，需确保OU已经申请分配计算资源。申请计算资源的步骤，请参考[资源申请及扩容](/docs/enos/zh_CN/latest/resourcemanagement/getstarted.html)。
 
 ## 调试流数据处理任务
 

@@ -39,7 +39,7 @@
 
 
 - 存储配置：对 *test_raw* 和 *test_5min* 点进行存储配置，为 *test_raw* 配置AI原始数据存储类型，为 *test_5min* 配置为AI分钟级规整数据存储类型；具体配置请参考 [数据存储配置和读取](gettingstarted_storage_policy)。
-- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/2.0.9/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
+- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
 
 
 ## 第一步：创建并配置流数据处理任务
@@ -73,7 +73,7 @@
 
 进入 **流数据处理 > 流运维** 页面，就能看到已发布的所有任务了。找到已经发布的流任务，点击 **启动** 按钮启动任务。
 
-.. note:: - 启动任务之前，需确保组织已分配流数据处理资源。如需申请计算资源，请参考 `资源申请及扩容 </docs/enos/zh_CN/2.0.9/resourcemanagement/getstarted.html>`__。
+.. note:: - 启动任务之前，需确保组织已分配流数据处理资源。如需申请计算资源，请参考 `资源申请及扩容 </docs/enos/zh_CN/latest/resourcemanagement/getstarted.html>`__。
    - 如有运行中的流数据处理任务，启动新任务前，可暂停一个或多个运行中的任务，然后一并启动需要运行的任务。系统会为启动的任务重新分配计算资源。
 
 ## 第四步：查看任务运行结果

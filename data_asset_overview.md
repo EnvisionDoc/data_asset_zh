@@ -65,8 +65,8 @@ EnOS数据资产管理主要服务于以下角色：
 
 ### 设备管理服务
 
-EnOS设备管理服务帮助你快速将物理设备安全连接至EnOS云端并开始数据传输，管理设备周期，及将物理世界的资产结构映射至数字世界。[了解更多 >>](/docs/device-connection/zh_CN/2.0.9/device_management_overview.html)
+EnOS设备管理服务帮助你快速将物理设备安全连接至EnOS云端并开始数据传输，管理设备周期，及将物理世界的资产结构映射至数字世界。[了解更多 >>](/docs/device-connection/zh_CN/latest/device_management_overview.html)
 
 ### 应用开发
 
-使用Enos SDK开发应用程序，并通过EnOS API获取存储的数据。[了解更多 >>](/docs/app-development/zh_CN/2.0.9/app_dev_overview.html)
+使用Enos SDK开发应用程序，并通过EnOS API获取存储的数据。[了解更多 >>](/docs/app-development/zh_CN/latest/app_dev_overview.html)
