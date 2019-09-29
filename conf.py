@@ -255,7 +255,7 @@ latex_elements = {
 
             \vspace{5mm}
 
-            \huge \textmd{版本}\textbf{ latest}
+            \huge \textmd{版本}\textbf{ 2.0.9}
             %% \vfill adds at the bottom
             \vfill
         \end{titlepage}
