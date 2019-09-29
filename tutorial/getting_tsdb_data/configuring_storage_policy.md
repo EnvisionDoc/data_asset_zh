@@ -13,7 +13,7 @@ In this tutorial, configure storage policy for the following measuring points th
 | MinReading10Min   | AI Normalized Data | Get the minimum value of the reading data every 10 minutes with the stream processing engine, and then store the minute-level normalized data in TSDB. |
 | ReadingDifference | AI Normalized Data | Get the difference between the maximum and minimum values of the reading data with the stream processing engine, and then store the normalized data in TSDB. |
 
-For detailed description of the supported storage types, see [Configuring TSDB Storage](/docs/data-asset/en/latest/configuring_tsdb_storage.html).
+For detailed description of the supported storage types, see [Configuring TSDB Storage](/docs/data-asset/en/2.0.8/configuring_tsdb_storage.html).
 
 ## Creating a storage policy group
 

@@ -15,7 +15,7 @@
 
 **数据准备**
 
-- 模型配置：配置教程请参考 [创建模型](/docs/device-connection/zh_CN/latest/howto/model/creating_model.html)。
+- 模型配置：配置教程请参考 [创建模型](/docs/device-connection/zh_CN/2.0.8/howto/model/creating_model.html)。
 
 本教程使用的模型 *test_Model* 的配置如下：
 

@@ -31,7 +31,7 @@
      - 必须保证需要处理的输入点和输出点的测点类型都是AI类型。
 
 
-- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
+- 数据接入：请参考 [设备连接](/docs/device-connection/zh_CN/2.0.8/quickstart/gettingstarted_device_connection.html) 来完成 *test_raw* 点数据的采集。
 
 
 ## 操作步骤

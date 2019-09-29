@@ -23,7 +23,7 @@
 |:---------|:---------|:---------|:---------|:---------|
 | 测点     | test_raw | test_raw | AI       | DOUBLE   |
 
-- **数据接入**：请参考[设备连接](/docs/device-connection/zh_CN/latest/quickstart/gettingstarted_device_connection.html)来完成设备连接，采集 *test_raw* 测点的数据。
+- **数据接入**：请参考[设备连接](/docs/device-connection/zh_CN/2.0.8/quickstart/gettingstarted_device_connection.html)来完成设备连接，采集 *test_raw* 测点的数据。
 
 ## 操作步骤
 
@@ -40,9 +40,9 @@
 
 1. 创建订阅：点击**添加订阅**按钮，可添加订阅Topic，本教程中选择**实时数据订阅**。
 
-2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法，请参考[管理应用](/docs/app-development/zh_CN/latest/managing_apps.html)。
+2. 选择订阅关联的SA账号：每个订阅实例都必须关联一个SA账号，目前EnOS平台上只有创建应用才能生成一个SA账号，具体SA生成方法，请参考[管理应用](/docs/app-development/zh_CN/2.0.8/managing_apps.html)。
 
-   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考[管理服务账号](/docs/iam/zh_CN/latest/howto/service_account/managing_service_account.html)。
+   .. note:: 数据订阅关联的SA账号必须已被授权获取资产的数据，否则订阅任务会认证失败，而不能成功订阅数据。授权SA账号的详细信息，请参考[管理服务账号](/docs/iam/zh_CN/2.0.8/howto/service_account/managing_service_account.html)。
 
 3. 选择需要订阅的客户数据：每个SA可访问多个客户的数据（通过应用购买），订阅可根据需要进行客户选择。
 
@@ -57,7 +57,7 @@
 ## 第三步：线下使用订阅Java SDK消费订阅数据
 
 EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发并消费订阅数据，请参考如下步骤进行线下开发。
-- 在IDE中引用对应的Maven地址，SDK的Maven仓库地址是：https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe。
+- 在IDE中引用对应的Maven地址，SDK的Maven仓库地址是：https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.2.0
 
   IDE中Maven引用示例如下：
 
@@ -65,7 +65,7 @@ EnOS平台提供对应的订阅Java SDK帮助开发者快速进行线下开发�
 <dependency>
   <groupId>com.envisioniot</groupId>
   <artifactId>enos-subscribe</artifactId>
-  <version>2.3.0</version>
+  <version>2.2.0</version>
 </dependency>
 ```
 

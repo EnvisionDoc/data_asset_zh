@@ -41,7 +41,7 @@ See the following example:
 
 .. image:: media/stream_config_1.png
 
-For more information about the *Window Aggregation Template*, see [Window Aggregation Template](/docs/data-asset/en/latest/learn/ai_template_overview.html).
+For more information about the *Window Aggregation Template*, see [Window Aggregation Template](/docs/data-asset/en/2.0.8/learn/ai_template_overview.html).
 
 ### Job for getting the difference between measuring points
 
@@ -60,7 +60,7 @@ See the following example:
 
 .. image:: media/stream_config_2.png
 
-For more information about the *Multi-Point Aggregation* template, see [Multi-Point Aggregation Template](/docs/data-asset/en/latest/learn/multi_point_overview.html).
+For more information about the *Multi-Point Aggregation* template, see [Multi-Point Aggregation Template](/docs/data-asset/en/2.0.8/learn/multi_point_overview.html).
 
 ## Starting data processing jobs
 

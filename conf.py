@@ -120,11 +120,11 @@ html_theme = 'sphinx_enos_theme'
 #
 html_theme_options = {
     'copyright_zh': '© 2019 Envision Digital. All Rights Reserved.',
-    'display_header': False,
+    'docs_url_zh': '/zh_CN/documentation/',
 }
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
+# Add any paths that contain custom static files (such as style sheets),
+# relative to this directory. They are copied after the built-in static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['./static']
 
@@ -132,7 +132,7 @@ html_static_path = ['./static']
 # to template names.
 #
 # This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+# refs: http://alabaster.readthedocs.io/en/2.0.8/installation.html#sidebars
 html_sidebars = {
     '**': [
         'relations.html',  # needs 'show_related': True theme option to display
@@ -196,7 +196,7 @@ latex_elements = {
         %\fancyhead[RO]{\small \nouppercase{\rightmark}}
         %\fancyhead[LE]{\small \nouppercase{\leftmark}}
 
-        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny EnOS Data Asset} }{\href{https://www.envisioniot.com}{\tiny Envision digital}}}
+        \fancyfoot[R]{\ifthenelse{\isodd{\value{page}}}{{\tiny EnOS 数据资产管理} }{\href{https://www.envisioniot.com}{\tiny Envision digital}}}
 
         %%% page number
         \fancyfoot[CO, CE]{\thepage}
@@ -249,11 +249,11 @@ latex_elements = {
 
             \vspace{5mm}
 
-            \fontsize{30pt}{\baselineskip}\selectfont \textbf{数据资产}
+            \fontsize{30pt}{\baselineskip}\selectfont \textbf{数据资产管理}
 
             \vspace{5mm}
 
-            \huge \textmd{版本}\textbf{ latest}
+            \huge \textmd{版本}\textbf{ 2.0.8}
             %% \vfill adds at the bottom
             \vfill
         \end{titlepage}
@@ -284,7 +284,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, u'EnOSDocumentationCenter.tex', u'Data Asset',
+    (master_doc, u'EnOSDocumentationCenter.tex', u'数据资产管理',
      u'远景智能', 'book', 'true'),
 ]
 
@@ -296,7 +296,7 @@ latex_show_urls = 'footnote'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, u'enosdocumentationcenter', u'EnOS Data Asset',
+    (master_doc, u'enosdocumentationcenter', u'EnOS Fundamental',
      [author], 1)
 ]
 
@@ -307,7 +307,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'EnOSDocumentationCenter', 'EnOS Data Asset',
+    (master_doc, 'EnOSDocumentationCenter', 'EnOS Fundamental',
      author, 'EnOSDocumentationCenter', 'One line description of project.',
      'Miscellaneous'),
 ]

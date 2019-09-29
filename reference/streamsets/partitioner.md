@@ -39,6 +39,6 @@
 
 ### 输出示例
 
-.. image:: media/partitioner_result.png
+.. image:: media/partitioner_result.jpg
 
 <!--end-->

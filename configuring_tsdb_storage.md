@@ -102,6 +102,6 @@ PI数据存储类型的功能特性如下：
 
 ## TSDB存储资源
 
-在配置TSDB存储策略之后，需要确保组织已申请和分配TSDB存储资源，否则TSDB存储策略不能立即生效，数据也不能立即被存储。如需申请TSDB资源，请参考[资源申请及扩容](/docs/enos/zh_CN/latest/resourcemanagement/getstarted.html)。
+在配置TSDB存储策略之后，需要确保组织已申请和分配TSDB存储资源，否则TSDB存储策略不能立即生效，数据也不能立即被存储。如需申请TSDB资源，请参考[资源申请及扩容](/docs/enos/zh_CN/2.0.8/resourcemanagement/getstarted.html)。
 
 <!--end-->

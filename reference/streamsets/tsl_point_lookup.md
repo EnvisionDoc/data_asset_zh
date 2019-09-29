@@ -51,6 +51,6 @@
 
 ### 输出示例
 
-.. image:: media/tsl_point_lookup_result.png
+.. image:: media/tsl_point_lookup_result.jpg
 
 <!--end-->

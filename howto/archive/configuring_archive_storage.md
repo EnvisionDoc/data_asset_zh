@@ -21,7 +21,7 @@ EnOS支持对设备采集原始数据和流式计算处理之后的实时数据�
 填写存储归档数据的详细配置信息，包括选择存储资源、设置存储文件属性等。
 
 1. 选择 **资源类型**，指定同步归档文件的目标存储系统（支持HDFS和BLOB）。
-2. 从 **存储资源** 下拉菜单中，选择已通过 [外部源连接](/docs/offline-data/zh_CN/latest/data_source/index.html) 注册的数据源，或通过 [资源管理](/docs/enos/zh_CN/latest/resourcemanagement/overview.html) 申请的HDFS存储资源。
+2. 从 **存储资源** 下拉菜单中，选择已通过 [外部源连接](/docs/offline-data/zh_CN/2.0.8/data_source/index.html) 注册的数据源，或通过 [资源管理](/docs/enos/zh_CN/2.0.8/resourcemanagement/overview.html) 申请的HDFS存储资源。
 3. 输入归档数据在存储系统中的 **存储路径**，路径必须以"/"开始和结尾，并选择存储路径根目录的时间分区格式。对时间分区格式的详细介绍，参见 [存储路径分区参数](../../reference/archive_storage#path)。
 4. 选择按事件时间或系统时间生成目录，对按不同时间生成目录的详细介绍，参见 [数据归档逻辑](../../reference/archive_storage#logic)。
 5. 输入归档 **文件名称**，支持英文大小写字母、数字、和中横线，并且不能超过50个字符。文件生成时，系统将自动在文件名后加上"\_UTC"时间戳后缀。若选择按事件时间生成目录，则时间戳后缀为数据的事件时间对应的UTC+0时间；若选择按系统时间生成目录，则时间戳后缀为系统时间对应的UTC+0时间；

@@ -66,8 +66,8 @@ EnOS流式计算数据处理流程如下：
 
 ### 设备管理服务
 
-EnOS设备管理服务帮助你快速将物理设备安全连接至EnOS云端并开始数据传输，管理设备周期，及将物理世界的资产结构映射至数字世界。[了解更多 >>](/docs/device-connection/zh_CN/latest/device_management_overview.html)
+EnOS设备管理服务帮助你快速将物理设备安全连接至EnOS云端并开始数据传输，管理设备周期，及将物理世界的资产结构映射至数字世界。[了解更多 >>](/docs/device-connection/zh_CN/2.0.8/device_management_overview.html)
 
 ### 数据资产管理服务
 
-EnOS数据资产管理服务可帮助你更好地管理从设备上传到云端的数据，订阅设备实时数据和告警数据，自定义数据存储策略，以及使用EnOS API检索已存储的数据。[了解更多 >>](/docs/data-asset/zh_CN/latest/data_asset_overview.html)
+EnOS数据资产管理服务可帮助你更好地管理从设备上传到云端的数据，订阅设备实时数据和告警数据，自定义数据存储策略，以及使用EnOS API检索已存储的数据。[了解更多 >>](/docs/data-asset/zh_CN/2.0.8/data_asset_overview.html)

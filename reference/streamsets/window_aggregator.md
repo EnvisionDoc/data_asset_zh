@@ -67,6 +67,6 @@
 
 ### 输出示例
 
-.. image:: media/window_aggregator_result.png
+.. image:: media/window_aggregator_result.jpg
 
 <!--end-->

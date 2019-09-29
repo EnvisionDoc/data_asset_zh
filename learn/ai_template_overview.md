@@ -10,7 +10,7 @@
 
 **基于时间窗口处理数据**
 
-基于数据事件时间，对时间窗口内的数据进行聚合处理。对时间窗口的详细介绍，请参考[时间窗口参考说明](/docs/data-asset/zh_CN/latest/reference/time_window.html)。
+基于数据事件时间，对时间窗口内的数据进行聚合处理。对时间窗口的详细介绍，请参考[时间窗口参考说明](/docs/data-asset/zh_CN/2.0.8/reference/time_window.html)。
 
 **时间窗口延迟设置**
 
@@ -25,5 +25,5 @@
 
 可通过以下两大步骤，使用时间窗口聚合模板快速创建流数据处理任务：
 
-1. 创建流数据处理任务时，选择**时间窗口聚合模板**。详见[创建流数据处理任务](/docs/data-asset/zh_CN/latest/howto/stream/creating_job.html)。
-2. 配置流数据处理策略。详见[配置时间窗口数据聚合任务](/docs/data-asset/zh_CN/latest/howto/stream/configuring_ai_template.html)。
+1. 创建流数据处理任务时，选择**时间窗口聚合模板**。详见[创建流数据处理任务](/docs/data-asset/zh_CN/2.0.8/howto/stream/creating_job.html)。
+2. 配置流数据处理策略。详见[配置时间窗口数据聚合任务](/docs/data-asset/zh_CN/2.0.8/howto/stream/configuring_ai_template.html)。

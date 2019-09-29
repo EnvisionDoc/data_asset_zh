@@ -49,10 +49,10 @@
 
 **配置示例**
 
-.. image:: media/site_lookup_config.png
+.. image:: media/site_lookup_config.jpg
 
 **输出示例**
 
-.. image:: media/site_lookup_result.png
+.. image:: media/site_lookup_result.jpg
 
 <!--end-->
