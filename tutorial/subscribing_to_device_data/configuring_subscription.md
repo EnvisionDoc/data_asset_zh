@@ -92,7 +92,7 @@ The application service account (SA) associated with the data subscription jobs 
 
    .. image:: media/authorizing_sa.png
 
-After authorizing the application service account with asset access permission, you can enable the data subscription jobs. For detailed information about authorizing the service account, see [Managing Service Accounts](/docs/iam/zh_CN/2.0.9/howto/service_account/managing_service_account.html).
+After authorizing the application service account with asset access permission, you can enable the data subscription jobs. For detailed information about authorizing the service account, see [Managing Service Accounts](/docs/enos/zh_CN/2.0.9/iam/howto/service_account/managing_service_account.html).
 
 ## Enabling the subscription jobs
 
